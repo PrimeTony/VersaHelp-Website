@@ -1,0 +1,118 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-image: url('images/babysitter background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    background-color: #333;
+    padding: 0.5em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #4CAF50;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+section {
+    padding: 2em 1em;
+    max-width: 800px;
+    margin: 6em auto 0;
+}
+
+#babysitters {
+    position: relative;
+    padding-top: 5em; /* Adjust to your liking */
+}
+
+#babysitters h2 {
+    position: fixed;
+    top: 60px; /* Below the header */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 0.5em 1em;
+    z-index: 999;
+}
+
+#babysitters .babysitter-profile {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#babysitters .babysitter-profile img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 1em;
+}
+
+#babysitters .profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#babysitters .profile-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+#babysitters .profile-details {
+    display: block;
+    margin-top: 0.5em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
