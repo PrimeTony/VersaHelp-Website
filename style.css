@@ -1,3 +1,4 @@
+/* General body styling */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -6,8 +7,8 @@ body {
     line-height: 1.6;
 }
 
+/* Header styling */
 header {
-    background-image: url('images/babysitter background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -16,9 +17,10 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Ensures header stays on top */
 }
 
+/* Navigation styling */
 nav {
     background-color: #333;
     padding: 0.5em 0;
@@ -29,48 +31,50 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center-aligns the nav items */
 }
 
 nav ul li {
-    margin: 0 1em;
+    margin: 0 1em; /* Adds spacing between nav items */
 }
 
 nav ul li a {
-    background-color: #4CAF50;
+    background-color: #222c22;
     color: white;
     padding: 0.5em 1em;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    border: 1px solid #4CAF50;
-    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #868786;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
 }
 
 nav ul li a:hover {
     background-color: white;
-    color: #4CAF50;
+    color: #4CAF50; /* Changes color on hover */
 }
 
+/* General section styling */
 section {
     padding: 2em 1em;
     max-width: 800px;
-    margin: 6em auto 0;
+    margin: 6em auto 0; /* Centers content and adjusts for fixed header */
 }
 
+/* Babysitter section specific styling */
 #babysitters {
     position: relative;
-    padding-top: 5em; /* Adjust to your liking */
+    padding-top: 5em; /* Adjust for desired space */
 }
 
 #babysitters h2 {
     position: fixed;
-    top: 60px; /* Below the header */
+    top: 60px; /* Positions header below main header */
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
     padding: 0.5em 1em;
-    z-index: 999;
+    z-index: 999; /* Ensures text is above other content */
 }
 
 #babysitters .babysitter-profile {
@@ -88,13 +92,13 @@ section {
     border-radius: 50%;
     width: 80px;
     height: 80px;
-    margin-right: 1em;
+    margin-right: 1em; /* Adds space between image and text */
 }
 
 #babysitters .profile-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Centers text vertically */
 }
 
 #babysitters .profile-info h3 {
@@ -107,6 +111,54 @@ section {
     margin-top: 0.5em;
 }
 
+/* Container for the new section */
+.container {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 7em; /* Adjust margin to avoid overlap with fixed header */
+}
+
+.container h1 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+/* Grid layout for the new section */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column layout */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Box styling within the grid */
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    text-align: left;
+}
+
+.box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+.box h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Footer styling */
 footer {
     background-color: #333;
     color: white;

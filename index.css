@@ -1,0 +1,92 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensures header stays on top */
+}
+
+/* General section styling */
+section {
+    padding: 2em 1em;
+    max-width: 800px;
+    margin: 6em auto 0; /* Centers content and adjusts for fixed header */
+}
+
+/* Container for the new section */
+.container {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 7em; /* Adjust margin to avoid overlap with fixed header */
+}
+
+.container h1 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+/* Grid layout for the new section */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column layout */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Box styling within the grid */
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    text-align: left;
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color from parent */
+}
+
+.box:hover {
+    background-color: #a6a2a2; /* Adds a slight background change on hover */
+}
+
+.box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+.box h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
