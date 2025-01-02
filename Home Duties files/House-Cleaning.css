@@ -1,0 +1,102 @@
+/* Logo Styling */
+.logo {
+    width: 16%; /* 60% smaller than the original 40% size */
+}
+
+/* Header Content Styling */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-text h1 {
+    font-size: 95%;/* Reduce font size by 30% */
+    color: black; /* Text color */
+}
+
+header {
+    position: relative;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center align the container */
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Heading color */
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #555; /* Paragraph text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Profiles Grid Styling */
+.profiles-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile-box {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.profile-box:hover {
+    transform: scale(1.05); /* Enlarge the profile box slightly on hover */
+}
+
+.profile-box img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Make profile images circular */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.profile-box img:hover {
+    transform: scale(1.2); /* Enlarge the image on hover */
+}
+
+.profile-box h2 {
+    margin-bottom: 10px;
+}
+
+.profile-box p {
+    margin-bottom: 5px;
+}
+
+.profile-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Back Button Styling */
+button {
+    margin-bottom: 20px; /* Add some space below the button */
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
