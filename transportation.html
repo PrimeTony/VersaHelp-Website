@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transportation - Top Shine Car Wash & Valet</title>
+    <!-- Link to Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="car-wash.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="transportation.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Logo as Navigation to Home Page -->
@@ -16,24 +18,132 @@
         </a>
     </div>
 
-    <!-- Top Navigation with Icons -->
+    <!-- Top Navigation -->
     <nav class="top-nav">
-        <a href="car-wash.html"><img src="images/icons/carwash icon2.avif" alt="Car Wash"></a>
-        <a href="transportation.html"><img src="images/icons/transport icon.webp" alt="Transportation"></a>
-        <a href="babysitting.html"><img src="images/icons/babysitting.webp" alt="Babysitting"></a>
-        <a href="errand-running.html"><img src="images/icons/eerand running icon.png" alt="Errand Running"></a>
+        <a href="car-wash.html">Car Wash</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="babysitting.html">Babysitting</a>
+        <a href="errand-running.html">Errand Running</a>
     </nav>
 
     <!-- Content specific to the transportation page -->
     <div class="content">
         <div class="container">
- 
+            <!-- Services Section -->
+            <div class="service-section">
+                <div class="service-box">
+                    <h2>Goods transportation</h2>
+                    <ul>
+                        <li>Deliver goods to your Customers, Warehouse, Shop and Home.</li>
+                        <li>Manufacturers, Retailers, Supply shops.</li>
+                        <li>Once-off, Short term and Long term transportation.</li>
+                    </ul>
+                </div>
+                <div class="service-box">
+                    <h2>Man and Van Services</h2>
+                    <ul>
+                        <li>Home and Office moves on demand.</li>
+                        <li>Furniture, Home Equipment, Personal goods.</li>
+                        <li>Get help to carry and deliver on time.</li>
+                    </ul>
+                </div>
+                <div class="service-box">
+                    <h2>Schedule trips</h2>
+                    <ul>
+                        <li>Schedule transportation for your goods.</li>
+                        <li>Trained and trusted drivers for long distance and short distance trips.</li>
+                        <li>Insured services 24/7 for the vehicle and goods in transit.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Vehicle Selection Section -->
+            <div class="vehicle-selection">
+                <h3>Choose a vehicle size and driver below</h3>
+                <div class="vehicle-box">
+                    <p>Mini Van: From <span class="price">R250</span> <span class="old-price">R300</span></p>
+                    <a href="#">view more</a> | <a href="#" class="get-quote" data-vehicle="Mini Van">Get Quote</a>
+                </div>
+                <div class="vehicle-box">
+                    <p>1 Ton: From <span class="price">R350</span> <span class="old-price">R400</span></p>
+                    <a href="#">view more</a> | <a href="#" class="get-quote" data-vehicle="1 Ton">Get Quote</a>
+                </div>
+                <div class="vehicle-box">
+                    <p>1.5 Ton: From <span class="price">R500</span> <span class="old-price">R550</span></p>
+                    <a href="#">view more</a> | <a href="#" class="get-quote" data-vehicle="1.5 Ton">Get Quote</a>
+                </div>
+                <div class="vehicle-box">
+                    <p>4 Ton: From <span class="price">R900</span> <span class="old-price">R1050</span></p>
+                    <a href="#">view more</a> | <a href="#" class="get-quote" data-vehicle="4 Ton">Get Quote</a>
+                </div>
+                <div class="vehicle-box">
+                    <p>8 Ton: From <span class="price">R1400</span> <span class="old-price">R1600</span></p>
+                    <a href="#">view more</a> | <a href="#" class="get-quote" data-vehicle="8 Ton">Get Quote</a>
+                </div>
+                <div class="vehicle-box">
+                    <p>4 Ton Tipper: From <span class="price">R350</span> <span class="old-price">R400</span></p>
+                    <a href="#">view more</a> | <a href="#" class="get-quote" data-vehicle="4 Ton Tipper">Get Quote</a>
+                </div>
+            </div>
+            <!-- Booking Form Section (Initially Hidden) -->
+            <div class="form-container" id="booking-form" style="display: none;">
+                <div class="form-group">
+                    <label for="pickup-address">Pick up address</label>
+                    <input type="text" id="pickup-address" name="pickup-address">
+                </div>
+                <div class="form-group">
+                    <label for="dropoff-address">Drop off address</label>
+                    <input type="text" id="dropoff-address" name="dropoff-address">
+                </div>
+                <div class="form-group">
+                    <label for="vehicle">Vehicle</label>
+                    <input type="text" id="vehicle" name="vehicle" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="options">Options</label>
+                    <div class="options">
+                        <a href="#">0 Floors, 1 Helper, Discounts ></a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile-number">Mobile number *</label>
+                    <input type="tel" id="mobile-number" name="mobile-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Details about what we are moving... *</label>
+                    <textarea id="details" name="details" rows="4" required></textarea>
+                </div>
+                <div class="form-group date-time">
+                    <div>
+                        <label for="collection-date">Collection date</label>
+                        <input type="date" id="collection-date" name="collection-date" value="2025-01-15">
+                    </div>
+                    <div>
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" value="10:59">
+                    </div>
+                </div>
+                <div class="form-group get-quotations">
+                    <button type="button">GET QUOTATIONS</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- JavaScript for Navigation Toggle -->
+    <!-- JavaScript to Show Booking Form -->
     <script>
-        // No JavaScript needed for this layout
+        document.querySelectorAll('.get-quote').forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+                const vehicle = this.getAttribute('data-vehicle');
+                document.getElementById('vehicle').value = vehicle;
+                document.getElementById('booking-form').style.display = 'block';
+                window.scrollTo(0, document.getElementById('booking-form').offsetTop);
+            });
+        });
     </script>
 </body>
 </html>

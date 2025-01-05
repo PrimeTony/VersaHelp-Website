@@ -1,15 +1,195 @@
-.logo {
-    width: 16%; /* 60% smaller than the original 40% size */
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/Backgrounds/trasport background.webp') no-repeat center center fixed;
+    background-size: cover;
 }
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background: rgba(255, 253, 253, 0.107); /* Adding a white background with some transparency for readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Services Section */
+.service-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.service-box {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.service-box h2 {
+    color: #333;
+}
+
+.service-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-box ul li {
+    margin: 10px 0;
+}
+
+/* Vehicle Selection Section */
+.vehicle-selection {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.vehicle-selection h3 {
+    color: #333;
+}
+
+.vehicle-box {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.vehicle-box p {
+    margin: 10px 0;
+}
+
+.vehicle-box .price {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.vehicle-box .old-price {
+    text-decoration: line-through;
+    color: #b2b2b2;
+}
+
+.vehicle-box a {
+    text-decoration: none;
+    color: #3498db;
+    display: block;
+    margin: 10px 0;
+}
+
+.vehicle-box a:hover {
+    color: #2980b9;
+}
+
+/* Booking Form Section */
+.form-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group .options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group .options a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.form-group .options a:hover {
+    text-decoration: underline;
+}
+
+.form-group .date-time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group .date-time input {
+    width: 48%;
+}
+
+.form-group .get-quotations {
+    text-align: center;
+}
+
+.form-group .get-quotations button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group .get-quotations button:hover {
+    background-color: #0056b3;
+}
+
+/* Logo Styles */
+.logo {
+    width: 12.8%; /* 20% smaller than the previous 16% size */
+}
+
+/* Top Navigation Styles */
 .top-nav {
     position: fixed;
-    right: 10px; /* Position the nav bar on the top right */
+    right: 10px;
     top: 10px;
     display: flex;
-    gap: 20px; /* Space between icons */
-    align-items: center; /* Center align icons vertically */
+    gap: 20px;
+    align-items: center;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease-in-out;
 }
-.top-nav img {
-    width: 40px; /* Adjust icon size as needed */
-    height: auto;
+
+.top-nav:hover {
+    opacity: 1; /* Visible on hover */
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.top-nav a:hover {
+    background: #ddd;
 }
