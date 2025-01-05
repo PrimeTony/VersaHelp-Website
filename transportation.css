@@ -16,6 +16,47 @@ body {
     border-radius: 10px;
 }
 
+/* New Section: Where are we located? */
+.location-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map {
+    width: 40%;
+}
+
+.map img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-info {
+    width: 55%;
+}
+
+.service-info h2 {
+    color: #333;
+}
+
+.service-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-info ul li {
+    margin: 10px 0;
+}
+
 /* Services Section */
 .service-section {
     display: flex;
