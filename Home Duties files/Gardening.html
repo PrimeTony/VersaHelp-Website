@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laundry Services - Top Shine Car Wash & Valet</title>
-    <link rel="stylesheet" href="Laundry.css"> <!-- Link to the Laundry.css file -->
+    <link rel="stylesheet" href="Gardening.css"> <!-- Link to the Laundry.css file -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .dropdown-form {
+            display: none; /* Hide the form by default */
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function toggleForm(button) {
+            const form = button.nextElementSibling; // Get the next sibling element (the form)
+            if (form.style.display === "none" || form.style.display === "") {
+                form.style.display = "block"; // Show the form
+            } else {
+                form.style.display = "none"; // Hide the form
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -16,7 +32,7 @@
                 </a>
             </div>
             <div class="header-text">
-                <h1>Select a Helper</h1>
+                <h1>Gardening</h1>
             </div>
         </div>
     </header>
@@ -32,7 +48,24 @@
                     <p>Age: 30</p>
                     <p>Gender: Female</p>
                     <p>Ethnicity: Caucasian</p>
-                    <button>Select</button>
+                    <button onclick="toggleForm(this)">Select</button> <!-- Button to toggle the form -->
+                    <div class="dropdown-form">
+                        <form>
+                            <label for="address">Address:</label><br>
+                            <input type="text" id="address" name="address"><br>
+                            <label for="bookingDateTime">Booking Date & Time:</label><br>
+                            <input type="datetime-local" id="bookingDateTime" name="bookingDateTime"><br>
+                            <label for="comments">Additional Comments:</label><br>
+                            <textarea id="comments" name="comments"></textarea><br>
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            <label for="phone">Phone Number:</label><br>
+                            <input type="tel" id="phone" name="phone"><br>
+                            <label for="altPhone">Alternate Number:</label><br>
+                            <input type="tel" id="altPhone" name="altPhone"><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
                 </div>
                 <!-- Profile 2 -->
                 <div class="profile-box">
@@ -41,7 +74,24 @@
                     <p>Age: 45</p>
                     <p>Gender: Male</p>
                     <p>Ethnicity: African American</p>
-                    <button>Select</button>
+                    <button onclick="toggleForm(this)">Select</button> <!-- Button to toggle the form -->
+                    <div class="dropdown-form">
+                        <form>
+                            <label for="address">Address:</label><br>
+                            <input type="text" id="address" name="address"><br>
+                            <label for="bookingDateTime">Booking Date & Time:</label><br>
+                            <input type="datetime-local" id="bookingDateTime" name="bookingDateTime"><br>
+                            <label for="comments">Additional Comments:</label><br>
+                            <textarea id="comments" name="comments"></textarea><br>
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            <label for="phone">Phone Number:</label><br>
+                            <input type="tel" id="phone" name="phone"><br>
+                            <label for="altPhone">Alternate Number:</label><br>
+                            <input type="tel" id="altPhone" name="altPhone"><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
                 </div>
                 <!-- Profile 3 -->
                 <div class="profile-box">
@@ -50,13 +100,27 @@
                     <p>Age: 27</p>
                     <p>Gender: Female</p>
                     <p>Ethnicity: Hispanic</p>
-                    <button>Select</button>
+                    <button onclick="toggleForm(this)">Select</button> <!-- Button to toggle the form -->
+                    <div class="dropdown-form">
+                        <form>
+                            <label for="address">Address:</label><br>
+                            <input type="text" id="address" name="address"><br>
+                            <label for="bookingDateTime">Booking Date & Time:</label><br>
+                            <input type="datetime-local" id="bookingDateTime" name="bookingDateTime"><br>
+                            <label for="comments">Additional Comments:</label><br>
+                            <textarea id="comments" name="comments"></textarea><br>
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            <label for="phone">Phone Number:</label><br>
+                            <input type="tel" id="phone" name="phone"><br>
+                            <label for="altPhone">Alternate Number:</label><br>
+                            <input type="tel" id="altPhone" name="altPhone"><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
                 </div>
-                <!-- Add more profiles as needed -->
             </div>
         </div>
     </div>
-
-    
 </body>
 </html>
