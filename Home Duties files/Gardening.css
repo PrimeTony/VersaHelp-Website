@@ -33,7 +33,6 @@ header {
     border-bottom: 5px solid #007bff; /* Accent border */
 }
 
-
 /* Container Styling */
 .container {
     max-width: 1200px; /* Set maximum width of the container */
@@ -200,3 +199,17 @@ button:hover {
     resize: vertical; /* Allow vertical resizing */
     min-height: 100px; /* Set minimum height */
 }
+
+/* Gardening Services Section Styling */
+.gardening-services {
+    background-color: #f9f9f9; /* Light background color for the section */
+    padding: 20px; /* Add padding around the section */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    margin-top: 20px; /* Add space above the section */
+    text-align: center; /* Center align the text */
+}
+
+.gardening-services h2 {
+    margin-bottom: 15px; /* Add space below the heading */
+    font-size: 1.5em

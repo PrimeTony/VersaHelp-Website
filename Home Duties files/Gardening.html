@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laundry Services - Top Shine Car Wash & Valet</title>
-    <link rel="stylesheet" href="Gardening.css"> <!-- Link to the Laundry.css file -->
+    <title>Gardening Services - VersaHelp</title>
+    <link rel="stylesheet" href="Gardening.css"> <!-- Link to the Gardening.css file -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         .dropdown-form {
             display: none; /* Hide the form by default */
+            margin-top: 10px;
+        }
+        .services-dropdown {
+            display: none; /* Hide the dropdown by default */
             margin-top: 10px;
         }
     </style>
@@ -19,6 +23,14 @@
                 form.style.display = "block"; // Show the form
             } else {
                 form.style.display = "none"; // Hide the form
+            }
+        }
+        function toggleDropdown() {
+            const dropdown = document.getElementById("servicesDropdown");
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block"; // Show the dropdown
+            } else {
+                dropdown.style.display = "none"; // Hide the dropdown
             }
         }
     </script>
@@ -118,6 +130,36 @@
                             <input type="submit" value="Submit">
                         </form>
                     </div>
+                </div>
+            </div>
+
+            <!-- Gardening Services Section -->
+            <div class="gardening-services">
+                <h2>Gardening Services We Offer</h2>
+                <button onclick="toggleDropdown()">Show Services</button>
+                <div class="services-dropdown" id="servicesDropdown">
+                    <ul>
+                        <li>Pavement weeds removal</li>
+                        <li>Landscape design</li>
+                        <li>Pruning</li>
+                        <li>Garden maintenance</li>
+                        <li>Lawn care</li>
+                        <li>Weeding</li>
+                        <li>Hedging</li>
+                        <li>Garden cleanup</li>
+                        <li>Mowing</li>
+                        <li>Planting</li>
+                        <li>Garden improvements</li>
+                        <li>Tree felling</li>
+                        <li>Lawn irrigation installation</li>
+                        <li>Trimming</li>
+                        <li>Additional plants</li>
+                        <li>Fertilising</li>
+                        <li>Garden condition and collected debris</li>
+                        <li>Garden installation</li>
+                        <li>Refuse removal</li>
+                        <li>Soil loosening</li>
+                    </ul>
                 </div>
             </div>
         </div>
