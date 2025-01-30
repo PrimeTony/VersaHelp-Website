@@ -6,6 +6,15 @@ body {
     color: #333;
     line-height: 1.6;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background: url('images/beautiful-red-brick-house-with-decorative-lights.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensure the background image covers the whole page */
+}
 
 /* Header styling */
 header {
@@ -84,8 +93,8 @@ header {
 .popular-service {
     flex: 1; /* Sidebar flex */
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff2a;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
     border-radius: 8px;
     margin-left: 20px;
 }
@@ -113,14 +122,14 @@ header {
 
 .service-preview p {
     font-size: 1em;
-    color: #333;
+    color: #000000;
     margin-bottom: 20px;
 }
 
 .service-preview .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #0004ff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
