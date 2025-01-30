@@ -1,15 +1,191 @@
+/* styles.css */
+
+/* General Page Styling */
+body {
+    background: url('images/Backgrounds/stock-photo-flower-works-in-home-garden.jpg') no-repeat center center fixed; 
+    background-size: cover; /* Ensure the background image covers the whole page */
+    font-family: 'Roboto', sans-serif; 
+    color: #333; 
+    margin: 0; 
+    padding: 0; 
+}
+
+
+
+/* Logo Styling */
 .logo {
-    width: 16%; /* 60% smaller than the original 40% size */
+    width: 16%; /* Set the logo width to 16% */
 }
-.top-nav {
-    position: fixed;
-    right: 10px; /* Position the nav bar on the top right */
-    top: 10px;
-    display: flex;
-    gap: 20px; /* Space between icons */
-    align-items: center; /* Center align icons vertically */
+
+/* Header Content Styling */
+.header-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out elements evenly */
+    align-items: center; /* Align items to the center */
+    padding: 5px; /* Reduce padding by 25% (from 20px to 15px) */
 }
-.top-nav img {
-    width: 40px; /* Adjust icon size as needed */
-    height: auto;
+
+.header-text h1 {
+    font-size: 1.125em; /* Reduce font size by 25% (from 1.5em to 1.125em) */
+    color: white; /* Set text color to white */
+    text-align: center; /* Center align the text */
+}
+
+header {
+    background-color: #666666; /* Dark background for header */
+    color: white; /* White text color */
+    padding: 15px; /* Reduce padding by 25% (from 20px to 15px) */
+    border-bottom: 5px solid #007bff; /* Accent border */
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px; /* Set maximum width of the container */
+    margin: 0 auto; /* Center align the container */
+    padding: 20px; /* Add padding around the container */
+}
+
+/* Heading and Paragraph Styling */
+h1, h2 {
+    font-family: 'Roboto', sans-serif; /* Set font family to Roboto */
+    color: #333; /* Set heading color to #333 */
+}
+
+p {
+    font-family: 'Roboto', sans-serif; /* Set font family to Roboto */
+    color: #555; /* Set paragraph text color to #555 */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Profiles Grid Styling */
+.profiles-grid {
+    display: flex; /* Use flexbox for layout */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    gap: 20px; /* Set gap between items */
+    padding: 20px; /* Add padding around the grid */
+}
+
+.profile-box {
+    display: inline-block; /* Display items inline */
+    width: 250px; /* Set width */
+    padding: 20px; /* Add padding inside the box */
+    border: 1px solid #ddd; /* Add border around the box */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    text-align: center; /* Center align the text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+    background-color: white; /* Set background color */
+}
+
+.profile-box:hover {
+    transform: scale(1.05); /* Enlarge the profile box slightly on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add deeper shadow on hover */
+}
+
+.profile-box img {
+    width: 100px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add space below the image */
+    border-radius: 50%; /* Make profile images circular */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.profile-box img:hover {
+    transform: scale(1.2); /* Enlarge the image on hover */
+}
+
+.profile-box h2 {
+    margin-bottom: 10px; /* Add space below the heading */
+    font-size: 1.2em; /* Increase font size */
+}
+
+.profile-box p {
+    margin-bottom: 5px; /* Add space below the paragraph */
+    font-size: 0.9em; /* Set font size */
+}
+
+.profile-box button {
+    margin-top: 10px; /* Add space above the button */
+    padding: 10px 20px; /* Add padding inside the button */
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color to white */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.profile-box button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+/* Dropdown Form Styling */
+.dropdown-form {
+    display: none; /* Hide the form by default */
+    margin-top: 20px; /* Add space above the form */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ccc; /* Add border around the form */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: #ffffff; /* Set background color to white */
+    max-width: 500px; /* Limit the form width */
+    margin: 0 auto; /* Center the form */
+    transition: all 0.3s ease; /* Smooth transition for display */
+}
+
+.dropdown-form label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 10px; /* Add space below the labels */
+    font-family: 'Roboto', sans-serif; /* Set font family */
+    color: #333; /* Set label text color */
+    font-weight: bold; /* Make the label text bold */
+}
+
+.dropdown-form input, .dropdown-form textarea {
+    width: 100%; /* Set width to 100% */
+    padding: 10px; /* Add padding inside the input fields */
+    margin-bottom: 15px; /* Add space below the input fields */
+    border: 1px solid #ccc; /* Add border around the input fields */
+    border-radius: 5px; /* Round the corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+    font-family: 'Roboto', sans-serif; /* Set font family */
+    font-size: 16px; /* Increase font size */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Add inset shadow */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.dropdown-form input:focus, .dropdown-form textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.dropdown-form input[type="submit"] {
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color to white */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 10px 20px; /* Add padding inside the button */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.dropdown-form input[type="submit"]:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+.dropdown-form input[type="text"],
+.dropdown-form input[type="datetime-local"],
+.dropdown-form input[type="email"],
+.dropdown-form input[type="tel"],
+.dropdown-form textarea {
+    padding: 10px; /* Add padding inside the fields */
+    border: 1px solid #ddd; /* Add border around the fields */
+    border-radius: 5px; /* Round the corners */
+}
+
+.dropdown-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Set minimum height */
 }

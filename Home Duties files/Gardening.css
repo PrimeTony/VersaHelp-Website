@@ -1,11 +1,16 @@
+/* styles.css */
+
 /* General Page Styling */
 body {
-    background: linear-gradient(to bottom right, #f0f0f0, #ffffff); /* Light gradient background */
-    font-family: 'Roboto', sans-serif; /* Clean and modern font */
-    color: #333; /* Default text color */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    background: url('images/Backgrounds/stock-photo-flower-works-in-home-garden.jpg') no-repeat center center fixed; 
+    background-size: cover; /* Ensure the background image covers the whole page */
+    font-family: 'Roboto', sans-serif; 
+    color: #333; 
+    margin: 0; 
+    padding: 0; 
 }
+
+
 
 /* Logo Styling */
 .logo {
@@ -55,14 +60,15 @@ p {
 /* Profiles Grid Styling */
 .profiles-grid {
     display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Wrap items to the next line */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
     gap: 20px; /* Set gap between items */
-    justify-content: center; /* Center align the items */
+    padding: 20px; /* Add padding around the grid */
 }
 
 .profile-box {
-    flex: 1; /* Allow profile box to grow */
-    min-width: 250px; /* Set minimum width */
+    display: inline-block; /* Display items inline */
+    width: 250px; /* Set width */
     padding: 20px; /* Add padding inside the box */
     border: 1px solid #ddd; /* Add border around the box */
     border-radius: 10px; /* Round the corners */
@@ -111,22 +117,6 @@ p {
 }
 
 .profile-box button:hover {
-    background-color: #0056b3; /* Change background color on hover */
-}
-
-/* Back Button Styling */
-button {
-    margin-bottom: 20px; /* Add space below the button */
-    padding: 10px 20px; /* Add padding inside the button */
-    background-color: #007bff; /* Set background color */
-    color: #fff; /* Set text color to white */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Round the corners */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-button:hover {
     background-color: #0056b3; /* Change background color on hover */
 }
 
@@ -199,17 +189,3 @@ button:hover {
     resize: vertical; /* Allow vertical resizing */
     min-height: 100px; /* Set minimum height */
 }
-
-/* Gardening Services Section Styling */
-.gardening-services {
-    background-color: #f9f9f9; /* Light background color for the section */
-    padding: 20px; /* Add padding around the section */
-    border-radius: 10px; /* Round the corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    margin-top: 20px; /* Add space above the section */
-    text-align: center; /* Center align the text */
-}
-
-.gardening-services h2 {
-    margin-bottom: 15px; /* Add space below the heading */
-    font-size: 1.5em
