@@ -5,6 +5,8 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.6;
+    background: url('images/Black.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensure the background image covers the whole page */
 }
 
 /* Header styling */
@@ -51,7 +53,7 @@ header {
 
 /* Box styling within the grid */
 .box {
-    background-color: #fff;
+    background-color: #ffffff6d;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
@@ -61,7 +63,7 @@ header {
 }
 
 .box:hover {
-    background-color: #a6a2a2; /* Adds a slight background change on hover */
+    background-color: #d0cbcb; /* Adds a slight background change on hover */
 }
 
 .box img {
@@ -144,6 +146,7 @@ footer {
 .logo {
     width: 16%; /* 60% smaller than the original 40% size */
 }
+
 .top-nav {
     position: fixed;
     right: 10px; /* Position the nav bar on the top right */
@@ -152,6 +155,7 @@ footer {
     gap: 20px; /* Space between icons */
     align-items: center; /* Center align icons vertically */
 }
+
 .top-nav img {
     width: 40px; /* Adjust icon size as needed */
     height: auto;

@@ -32,7 +32,7 @@ body {
 }
 
 header {
-    background-color: #666666; /* Dark background for header */
+    background-color: #66666681; /* Dark background for header */
     color: white; /* White text color */
     padding: 15px; /* Reduce padding by 25% (from 20px to 15px) */
     border-bottom: 5px solid #007bff; /* Accent border */
@@ -70,12 +70,12 @@ p {
     display: inline-block; /* Display items inline */
     width: 250px; /* Set width */
     padding: 20px; /* Add padding inside the box */
-    border: 1px solid #ddd; /* Add border around the box */
+    border: 1px solid #d0cccc68; /* Add border around the box */
     border-radius: 10px; /* Round the corners */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
     text-align: center; /* Center align the text */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
-    background-color: white; /* Set background color */
+    background-color: rgba(185, 179, 179, 0.562); /* Set background color */
 }
 
 .profile-box:hover {
@@ -108,7 +108,7 @@ p {
 .profile-box button {
     margin-top: 10px; /* Add space above the button */
     padding: 10px 20px; /* Add padding inside the button */
-    background-color: #007bff; /* Set background color */
+    background-color: #001aff; /* Set background color */
     color: #fff; /* Set text color to white */
     border: none; /* Remove border */
     border-radius: 5px; /* Round the corners */
@@ -117,7 +117,7 @@ p {
 }
 
 .profile-box button:hover {
-    background-color: #0056b3; /* Change background color on hover */
+    background-color: #1950d0e3; /* Change background color on hover */
 }
 
 /* Dropdown Form Styling */
@@ -128,8 +128,8 @@ p {
     border: 1px solid #ccc; /* Add border around the form */
     border-radius: 10px; /* Round the corners */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add shadow */
-    background-color: #ffffff; /* Set background color to white */
-    max-width: 500px; /* Limit the form width */
+    background-color: #ffffff51; /* Set background color to white */
+    max-width:500px; /* Limit the form width */
     margin: 0 auto; /* Center the form */
     transition: all 0.3s ease; /* Smooth transition for display */
 }
@@ -138,15 +138,15 @@ p {
     display: block; /* Display labels as block elements */
     margin-bottom: 10px; /* Add space below the labels */
     font-family: 'Roboto', sans-serif; /* Set font family */
-    color: #333; /* Set label text color */
+    color: #000000; /* Set label text color */
     font-weight: bold; /* Make the label text bold */
 }
 
 .dropdown-form input, .dropdown-form textarea {
-    width: 100%; /* Set width to 100% */
+    width: 70%; /* Set width to 100% */
     padding: 10px; /* Add padding inside the input fields */
     margin-bottom: 15px; /* Add space below the input fields */
-    border: 1px solid #ccc; /* Add border around the input fields */
+    border: 1px solid #cccccc85; /* Add border around the input fields */
     border-radius: 5px; /* Round the corners */
     box-sizing: border-box; /* Ensure padding doesn't affect total width */
     font-family: 'Roboto', sans-serif; /* Set font family */

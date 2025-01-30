@@ -17,13 +17,14 @@
 
 /* General Page Styling */
 body {
-    background: url('images/Backgrounds/stock-photo-flower-works-in-home-garden.jpg') no-repeat center center fixed; 
+    background: url('images/Car-wash.jpg') no-repeat center center fixed; 
     background-size: cover; /* Ensure the background image covers the whole page */
     font-family: 'Roboto', sans-serif; 
     color: #333; 
     margin: 0; 
     padding: 0; 
 }
+
 
 
 
@@ -47,7 +48,7 @@ body {
 }
 
 header {
-    background-color: #666666; /* Dark background for header */
+    background-color: #666666a1; /* Dark background for header */
     color: white; /* White text color */
     padding: 15px; /* Reduce padding by 25% (from 20px to 15px) */
     border-bottom: 5px solid #007bff; /* Accent border */
@@ -90,7 +91,7 @@ p {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
     text-align: center; /* Center align the text */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
-    background-color: white; /* Set background color */
+    background-color: rgba(255, 255, 255, 0.517); /* Set background color */
 }
 
 .profile-box:hover {
