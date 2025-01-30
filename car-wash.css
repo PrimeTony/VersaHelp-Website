@@ -64,12 +64,12 @@ header {
 /* Heading and Paragraph Styling */
 h1, h2 {
     font-family: 'Roboto', sans-serif; /* Set font family to Roboto */
-    color: #333; /* Set heading color to #333 */
+    color: #000000; /* Set heading color to #333 */
 }
 
 p {
     font-family: 'Roboto', sans-serif; /* Set font family to Roboto */
-    color: #555; /* Set paragraph text color to #555 */
+    color: #000000; /* Set paragraph text color to #555 */
     line-height: 1.6; /* Improve readability */
 }
 
@@ -124,7 +124,7 @@ p {
 .profile-box button {
     margin-top: 10px; /* Add space above the button */
     padding: 10px 20px; /* Add padding inside the button */
-    background-color: #007bff; /* Set background color */
+    background-color: #0011ff; /* Set background color */
     color: #fff; /* Set text color to white */
     border: none; /* Remove border */
     border-radius: 5px; /* Round the corners */
@@ -141,10 +141,10 @@ p {
     display: none; /* Hide the form by default */
     margin-top: 20px; /* Add space above the form */
     padding: 20px; /* Add padding inside the form */
-    border: 1px solid #ccc; /* Add border around the form */
+    border: 1px solid #cccccc86; /* Add border around the form */
     border-radius: 10px; /* Round the corners */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add shadow */
-    background-color: #ffffff; /* Set background color to white */
+    background-color: #ffffff3a; /* Set background color to white */
     max-width: 500px; /* Limit the form width */
     margin: 0 auto; /* Center the form */
     transition: all 0.3s ease; /* Smooth transition for display */
@@ -154,7 +154,7 @@ p {
     display: block; /* Display labels as block elements */
     margin-bottom: 10px; /* Add space below the labels */
     font-family: 'Roboto', sans-serif; /* Set font family */
-    color: #333; /* Set label text color */
+    color: #000000; /* Set label text color */
     font-weight: bold; /* Make the label text bold */
 }
 

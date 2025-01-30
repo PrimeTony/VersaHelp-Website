@@ -5,9 +5,10 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.6;
-    background: url('images/Black.jpg') no-repeat center center fixed;
+    background: url('images/still-life-cozy-house-with-toys.jpg') no-repeat center center fixed;
     background-size: cover; /* Ensure the background image covers the whole page */
 }
+
 
 /* Header styling */
 header {

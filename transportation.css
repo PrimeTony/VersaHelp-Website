@@ -3,9 +3,10 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('images/Backgrounds/trasport background.webp') no-repeat center center fixed;
+    background: url('images/medium-shot-delivery-people.jpg') no-repeat center center fixed;
     background-size: cover;
 }
+
 
 .container {
     width: 80%;
@@ -92,13 +93,13 @@ body {
 }
 
 .vehicle-selection h3 {
-    color: #333;
+    color: #e8dfdf;
 }
 
 .vehicle-box {
-    background: #fff;
+    background: #ffffff3c;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.741);
     display: inline-block;
     width: 30%;
     margin: 10px;
@@ -111,7 +112,7 @@ body {
 
 .vehicle-box .price {
     font-weight: bold;
-    color: #2c3e50;
+    color: #000000;
 }
 
 .vehicle-box .old-price {
@@ -121,7 +122,7 @@ body {
 
 .vehicle-box a {
     text-decoration: none;
-    color: #3498db;
+    color: #0011ff;
     display: block;
     margin: 10px 0;
 }
@@ -143,7 +144,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: #ffffff57;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -161,7 +162,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: #ffffffcf;
 }
 
 .form-group {
@@ -213,7 +214,7 @@ body {
 
 .form-group .get-quotations button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #0800fff9;
     color: #fff;
     border: none;
     border-radius: 5px;

@@ -2,15 +2,13 @@
 
 /* General Page Styling */
 body {
-    background: url('images/Backgrounds/stock-photo-flower-works-in-home-garden.jpg') no-repeat center center fixed; 
+    background: url('images/little-girl-home.jpg') no-repeat center center fixed; 
     background-size: cover; /* Ensure the background image covers the whole page */
     font-family: 'Roboto', sans-serif; 
     color: #333; 
     margin: 0; 
     padding: 0; 
 }
-
-
 
 /* Logo Styling */
 .logo {
@@ -34,7 +32,7 @@ body {
 header {
     background-color: #66666681; /* Dark background for header */
     color: white; /* White text color */
-    padding: 15px; /* Reduce padding by 25% (from 20px to 15px) */
+    padding: 15px; 
     border-bottom: 5px solid #007bff; /* Accent border */
 }
 
@@ -48,12 +46,12 @@ header {
 /* Heading and Paragraph Styling */
 h1, h2 {
     font-family: 'Roboto', sans-serif; /* Set font family to Roboto */
-    color: #333; /* Set heading color to #333 */
+    color: #000000; /* Set heading color to #333 */
 }
 
 p {
     font-family: 'Roboto', sans-serif; /* Set font family to Roboto */
-    color: #555; /* Set paragraph text color to #555 */
+    color: #000000; /* Set paragraph text color to #555 */
     line-height: 1.6; /* Improve readability */
 }
 
