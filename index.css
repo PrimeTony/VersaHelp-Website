@@ -18,28 +18,25 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* 30% darker overlay */
+    background: rgba(0, 0, 0, 0.3);
     z-index: -1;
 }
 
 /* Header styling */
 header {
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 1.5em 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-/* Logo styling - top left */
+/* Logo positioning and size */
 .logo-container {
-    position: absolute;
-    top: 10px;
-    left: 20px;
+    margin-left: 20px;
 }
 
 .logo {
@@ -90,31 +87,26 @@ header {
 }
 
 /* Sidebar styling */
-.popular-service {
+.sidebar {
     flex: 1;
     padding: 20px;
+}
+
+/* Shared style for Popular Service & About VersaHelp */
+.popular-service,
+.about-versahelp {
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 4px 8px rgb(0, 0, 0);
     border-radius: 8px;
-    margin-left: 20px;
+    padding: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Centered headings */
 .popular-service h2,
 .about-versahelp h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    text-align: center;
-}
-
-/* About VersaHelp box */
-.about-versahelp {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 8px;
-    text-align: center;
 }
 
 /* Service preview button */
@@ -131,6 +123,98 @@ header {
     background-color: #0056b3;
 }
 
+/* Connect With Us Section */
+.connect-with-us {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.connect-with-us h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.facebook { background: #1877F2; }
+.instagram { background: #E4405F; }
+.whatsapp { background: #25D366; }
+
+.facebook:hover { background: #1256a1; }
+.instagram:hover { background: #d81a4b; }
+.whatsapp:hover { background: #1ba34e; }
+
+/* Review Section */
+.review-section {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.review-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.review-section select,
+.review-section textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.review-section button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0004ff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.review-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Support Button */
+.contact-support {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-support .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact-support .btn:hover {
+    background-color: #45a049;
+}
+
 /* Footer */
 footer {
     background-color: #333;
@@ -142,65 +226,44 @@ footer {
     width: 100%;
 }
 
-/* Connect with Us Section */
-.connect-with-us {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.connect-with-us h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-/* Social Media Icons */
-.social-icons {
+/* Star Rating Section */
+.star-rating {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-.social-icons a {
-    text-decoration: none;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, background-color 0.3s;
+.star-rating input[type="radio"] {
+    display: none;
 }
 
-.social-icons a:hover {
-    transform: scale(1.1);
+.star-rating label {
+    font-size: 2em;
+    color: #d3d3d3; /* Light gray for unselected stars */
+    cursor: pointer;
 }
 
-/* Social Media Icon Images */
-.social-icons img {
-    width: 30px;
-    height: 30px;
+.star-rating input[type="radio"]:checked ~ label {
+    color: #ffcc00; /* Yellow for selected stars */
 }
 
-/* Facebook */
-.social-icons a.facebook:hover {
-    background-color: #1877f2;
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffcc00; /* Change color to yellow when hovering over a star */
 }
 
-/* Instagram */
-.social-icons a.instagram:hover {
-    background-color: #e4405f;
+/* Button styling for Submit Rating */
+.review-section button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0004ff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-/* WhatsApp */
-.social-icons a.whatsapp:hover {
-    background-color: #25d366;
+.review-section button:hover {
+    background-color: #0056b3;
 }
