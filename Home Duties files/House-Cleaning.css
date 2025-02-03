@@ -2,15 +2,13 @@
 
 /* General Page Styling */
 body {
-    background: url('images/Backgrounds/stock-photo-flower-works-in-home-garden.jpg') no-repeat center center fixed; 
+    background: url('images/little-girl-home.jpg') no-repeat center center fixed; 
     background-size: cover; /* Ensure the background image covers the whole page */
     font-family: 'Roboto', sans-serif; 
     color: #333; 
     margin: 0; 
     padding: 0; 
 }
-
-
 
 /* Logo Styling */
 .logo {
