@@ -16,6 +16,7 @@
    cd VersaHelp
 
 ## npm install
-
+- Install dependencies:
 
 ## npm start
+- Run the server:
