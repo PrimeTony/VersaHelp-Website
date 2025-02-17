@@ -1,269 +1,370 @@
-/* General body styling */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #000;
-    line-height: 1.6;
-    background: url('images/beautiful-red-brick-house-with-decorative-lights.jpg') no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
-}
-
-/* Dimming the background image by 30% */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: -1;
-}
-
-/* Header styling */
-header {
+/* Logo and Button container styling */
+.logo-button-container {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: space-between;
+    padding: 3px 5px;
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
-    width: 100%;
+    width: 95%; /* Adjusted width to be 5% smaller */
     top: 0;
     z-index: 1000;
 }
 
+/* Sticky Header */
+.logo-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 95%;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s; /* Optional: add transition for smoother effect */
+}
+
 /* Logo positioning and size */
 .logo-container {
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 .logo {
-    width: 16%;
+    width: 80px;
 }
 
-/* Main content container */
-.content {
+/* Navigation links styling */
+.nav-links {
     display: flex;
-    margin-top: 7em;
-    padding: 20px;
+    align-items: center;
 }
 
-/* General section styling */
-.container {
-    text-align: center;
-    padding: 50px 20px;
-    flex: 3;
+/* Dropdown button styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-/* Grid layout */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+.dropbtn {
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 6px 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-/* Box styling */
-.box {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-}
-
-.box:hover {
+.dropbtn:hover, .dropbtn:focus {
     background-color: #a6a2a2;
 }
 
-.box h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+/* Dropdown content styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-/* Sidebar styling */
-.sidebar {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Shared style for Popular Service & About VersaHelp */
-.popular-service,
-.about-versahelp {
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 4px 8px rgb(0, 0, 0);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.popular-service h2,
-.about-versahelp h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-/* Service preview button */
-.service-preview .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0004ff;
-    color: white;
+.dropdown-content a {
+    color: black;
+    padding: 10px 12px;
     text-decoration: none;
-    border-radius: 5px;
+    display: block;
 }
 
-.service-preview .btn:hover {
-    background-color: #0056b3;
+.dropdown-content a:hover {
+    background-color: #ddd;
 }
 
-/* Connect With Us Section */
-.connect-with-us {
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 4px 8px rgb(0, 0, 0);
-    border-radius: 8px;
-    padding: 20px;
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
     text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
-.connect-with-us h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
 
-/* Social Media Links */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+/* Social icons styling */
+.social-icons {
+    margin-top: 5px;
+}
+
+.social-icons a {
+    margin: 0 10px;
 }
 
 .social-icon {
-    display: inline-block;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    width: 24px;
+    height: 24px;
 }
 
-.facebook { background: #1877F2; }
-.instagram { background: #E4405F; }
-.whatsapp { background: #25D366; }
 
-.facebook:hover { background: #1256a1; }
-.instagram:hover { background: #d81a4b; }
-.whatsapp:hover { background: #1ba34e; }
+/* Main content margin adjustment */
+.content {
+    margin-top: 60px; /* Adjust the value based on the height of the header */
+}
 
-/* Review Section */
-.review-section {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+/* Cover Image Styling */
+.cover-image {
+    margin: 20px 0;
     text-align: center;
 }
 
-.review-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-
-.review-section select,
-.review-section textarea {
+.cover-image img {
     width: 100%;
-    padding: 10px;
+    max-width: 1200px;
+    height: auto;
+    max-height: 400px; /* Set a specific max height */
     border-radius: 5px;
-    margin-top: 10px;
 }
 
-.review-section button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #0004ff;
-    color: white;
+/* About Us Section Styling */
+.about-us {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
     border-radius: 5px;
-    border: none;
-    cursor: pointer;
 }
 
-.review-section button:hover {
-    background-color: #0056b3;
+.about-us h2 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Contact Support Button */
-.contact-support {
-    text-align: center;
+.about-us p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Sections Container Styling */
+.sections-container {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
-.contact-support .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
+.section {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #fff;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition */
 }
 
-.contact-support .btn:hover {
-    background-color: #45a049;
+.section h3 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
+.section p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Hover Effect */
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropbtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-button-container {
+        padding: 2px 5px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .dropbtn {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+}
+
+
+
+/* Existing styles... */
+
+/* New Footer Section Styles */
+.footer-section {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
     bottom: 0;
     width: 100%;
+    text-align: center;
 }
 
-/* Star Rating Section */
-.star-rating {
+.footer-container {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.star-rating input[type="radio"] {
-    display: none;
+.footer-column {
+    flex: 1;
+    margin: 10px;
 }
 
-.star-rating label {
-    font-size: 2em;
-    color: #d3d3d3; /* Light gray for unselected stars */
-    cursor: pointer;
+.footer-column h3 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-.star-rating input[type="radio"]:checked ~ label {
-    color: #ffcc00; /* Yellow for selected stars */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
 }
 
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-    color: #ffcc00; /* Change color to yellow when hovering over a star */
+.footer-column ul li {
+    margin: 5px 0;
 }
 
-/* Button styling for Submit Rating */
-.review-section button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #0004ff;
-    color: white;
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Flex Container for Cover Image and Map */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cover-image, #map {
+    flex: 1;
+    margin: 10px;
+}
+
+.cover-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     border-radius: 5px;
-    border: none;
-    cursor: pointer;
 }
 
-.review-section button:hover {
-    background-color: #0056b3;
+#map {
+    height: 400px; /* Set a specific height for the map */
+    max-width: 600px; /* Set a maximum width for the map */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .cover-image img, #map {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Existing styles... */
+
+/* Team Section Styles */
+.team-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.team-section h2 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
 }
