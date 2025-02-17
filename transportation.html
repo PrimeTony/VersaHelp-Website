@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Link to external CSS files -->
     <link rel="stylesheet" href="transportation.css">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Logo as Navigation to Home Page -->
@@ -16,110 +15,95 @@
         <a href="index.html">
             <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
         </a>
-        
     </div>
 
-    <button onclick="location.href='../index.html'">Back to Home</button>
-  
+    <!-- Home Icon as Navigation to Home Page -->
+    <div class="home-icon-container">
+        <a href="../index.html">
+            <img src="images/icons/home.svg" alt="Home Icon" class="home-icon">
+        </a>
+    </div>
 
-
-  
-            <!-- Vehicle Selection Section -->
-            <div class="vehicle-selection">
-                <h3>Choose a vehicle size and driver below</h3>
-                <div class="vehicle-box">
-                    <p>Nissan Np200</p>
-                    <a href="#" class="get-quote" data-vehicle="Mini Van" data-image="images\cars\IMG-20231108-WA0012.jpg">Get Quote</a>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Booking Form Section -->
+        <div class="booking-container">
+            <div class="form-container">
+                <h3>Book Your Move</h3>
+                <div class="form-group">
+                    <label for="pickup-address">Pick up address</label>
+                    <input type="text" id="pickup-address" name="pickup-address" required>
                 </div>
-                <div class="vehicle-box">
-                    <p>Nissan Np300</span></p>
-                <a href="#" class="get-quote" data-vehicle="1 Ton" data-image="images\cars\IMG_6064.JPG">Get Quote</a>
+                <div class="form-group">
+                    <label for="dropoff-address">Drop off address</label>
+                    <input type="text" id="dropoff-address" name="dropoff-address" required>
                 </div>
-                <div class="vehicle-box">
-                    <p>Toyota Hilux</p>
-                <a href="#" class="get-quote" data-vehicle="1.5 Ton" data-image="images/cars/IMG_6046.JPG">Get Quote</a>
+                <div class="form-group">
+                    <label>Vehicle Options</label>
+                    <div class="checkbox-group">
+                        <label for="trailer">
+                            <input type="checkbox" id="trailer" name="vehicle-options" value="Trailer"> Trailer
+                        </label>
+                        <label for="canopy">
+                            <input type="checkbox" id="canopy" name="vehicle-options" value="Canopy"> Canopy
+                        </label>
+                    </div>
                 </div>
-                <div class="vehicle-box">
-                    <p>Chevrollet Utility</p>
-                <a href="#" class="get-quote" data-vehicle="4 Ton" data-image="iimages/cars/IMG_6040.JPG">Get Quote</a>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                <div class="vehicle-box">Np200 & Trailer</p>
-                <a href="#" class="get-quote" data-vehicle="8 Ton" data-image="images\cars\IMG_6035.JPG">Get Quote</a>
+                <div class="form-group">
+                    <label for="mobile-number">Mobile number *</label>
+                    <input type="tel" id="mobile-number" name="mobile-number" required>
                 </div>
-                <div class="vehicle-box">
-                    Np300 & Trailer</p>
-                <a href="#" class="get-quote" data-vehicle="4 Ton Tipper" data-image="images\cars\IMG_2821 Copy.JPG">Get Quote</a>
+                <div class="form-group">
+                    <label for="details">Details about what we are moving... *</label>
+                    <textarea id="details" name="details" rows="4" required></textarea>
                 </div>
+                <div class="form-group date-time">
+                    <div>
+                        <label for="collection-date">Collection date</label>
+                        <input type="date" id="collection-date" name="collection-date" value="2025-01-15" required>
+                    </div>
+                    <div>
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" value="10:59" required>
+                    </div>
+                </div>
+                <div class="form-group get-quotations">
+                    <button type="button" onclick="submitForm()">GET QUOTATIONS</button>
+                </div>
+                <div id="quote-message" style="display:none; margin-top: 20px;"></div>
             </div>
+        </div>
 
-
-            <!-- Booking Form Section (Initially Hidden) -->
-            <div class="booking-container" style="display: none;">
-                <div class="vehicle-image" id="vehicle-image"></div>
-                <div class="form-container" id="booking-form">
-                    <div class="form-group">
-                        <label for="pickup-address">Pick up address</label>
-                        <input type="text" id="pickup-address" name="pickup-address">
-                    </div>
-                    <div class="form-group">
-                        <label for="dropoff-address">Drop off address</label>
-                        <input type="text" id="dropoff-address" name="dropoff-address">
-                    </div>
-                    <div class="form-group">
-                        <label for="vehicle">Vehicle</label>
-                        <input type="text" id="vehicle" name="vehicle" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="options">Options</label>
-                        <div class="options">
-                            <a href="#">0 Floors, 1 Helper, Discounts ></a>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mobile-number">Mobile number *</label>
-                        <input type="tel" id="mobile-number" name="mobile-number" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="details">Details about what we are moving... *</label>
-                        <textarea id="details" name="details" rows="4" required></textarea>
-                    </div>
-                    <div class="form-group date-time">
-                        <div>
-                            <label for="collection-date">Collection date</label>
-                            <input type="date" id="collection-date" name="collection-date" value="2025-01-15">
-                        </div>
-                        <div>
-                            <label for="time">Time</label>
-                            <input type="time" id="time" name="time" value="10:59">
-                        </div>
-                    </div>
-                    <div class="form-group get-quotations">
-                        <button type="button">GET QUOTATIONS</button>
-                    </div>
-                </div>
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/cars/IMG-20231108-WA0012.jpg" class="slideshow-img">
             </div>
+            <div class="mySlides fade">
+                <img src="images/cars/IMG_6064.JPG" class="slideshow-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/cars/IMG_6046.JPG" class="slideshow-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/cars/IMG_6040.JPG" class="slideshow-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/cars/IMG_6035.JPG" class="slideshow-img">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/cars/IMG_2821%20Copy.JPG" class="slideshow-img">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
     </div>
 
-    <!-- JavaScript to Show Booking Form and Vehicle Image -->
-    <script>
-        document.querySelectorAll('.get-quote').forEach(button => {
-            button.addEventListener('click', function (event) {
-                event.preventDefault();
-                const vehicle = this.getAttribute('data-vehicle');
-                const image = this.getAttribute('data-image');
-                document.getElementById('vehicle').value = vehicle;
-                if (image) {
-                    document.getElementById('vehicle-image').innerHTML = '<img src="' + image + '" alt="' + vehicle + '">';
-                }
-                document.querySelector('.booking-container').style.display = 'flex';
-                window.scrollTo(0, document.querySelector('.booking-container').offsetTop);
-            });
-        });
-    </script>
+    <!-- External JavaScript File -->
+    <script src="transportation.js"></script>
 </body>
 </html>
