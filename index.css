@@ -11,13 +11,41 @@
     z-index: 1000;
 }
 
+
+
+/* Logo Container Transition */
+.logo-container {
+    transition: opacity 0.3s;
+}
+
+
+/* Styling for Cover Image Heading */
+.cover-image h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+/* CSS for left-aligned cover image */
+.left-image {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    width: auto; /* Adjust width as needed */
+}
+
+
+
+
 /* Sticky Header */
 .logo-button-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 3px 5px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0);
     position: fixed;
     width: 95%;
     top: 0;
@@ -47,8 +75,8 @@
 }
 
 .dropbtn {
-    background-color: #f0f0f0;
-    color: #000;
+    background-color: #000ba8e1;
+    color: #ffffff;
     padding: 6px 10px;
     font-size: 12px;
     border: none;
@@ -65,7 +93,7 @@
     display: none;
     position: absolute;
     right: 0;
-    background-color: #f9f9f9;
+    background-color: #160fd090;
     min-width: 140px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -225,13 +253,9 @@ footer p {
     }
 }
 
-
-
-/* Existing styles... */
-
 /* New Footer Section Styles */
 .footer-section {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(16, 0, 192);
     color: #fff;
     padding: 20px 0;
     position: relative;
@@ -293,44 +317,86 @@ footer p {
 }
 
 
-/* Flex Container for Cover Image and Map */
+/* Flex Container for Cover Image and Request Quote Form */
 .flex-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin: 20px 0;
 }
 
-.cover-image, #map {
+.cover-image, .request-quote {
     flex: 1;
     margin: 10px;
 }
 
-.cover-image img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+/* Styling for Cover Image Heading */
+.cover-image h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+/* CSS for left-aligned cover image */
+.left-image {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    width: auto; /* Adjust width as needed */
+}
+
+/* Styling for Request Quote Section */
+.request-quote {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
     border-radius: 5px;
 }
 
-#map {
-    height: 400px; /* Set a specific height for the map */
-    max-width: 600px; /* Set a maximum width for the map */
+.request-quote h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-    }
-    
-    .cover-image img, #map {
-        max-width: 100%;
-        margin: 10px 0;
-    }
+.request-quote label {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Existing styles... */
+.request-quote input, .request-quote select, .request-quote textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.request-quote button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000ba8e1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.request-quote button:hover {
+    background-color: #a6a2a2;
+}
+
+
+/* Hover Effect for Links */
+.dropdown-content a:hover,
+.section:hover {
+    color: blue;
+}
 
 /* Team Section Styles */
 .team-section {
@@ -367,4 +433,142 @@ footer p {
 .team-member p {
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .cover-image img, #map {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+/* Team Section Styles */
+.team-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff00;
+    border-radius: 5px;
+}
+
+.team-section h2 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Hover Effect for Team Profile Images */
+.team-member img:hover {
+    border: 2px solid blue;
+    transform: scale(1.1);
+    transition: transform 0.3s, border 0.3s;
+}
+
+/* Flex Container for Cover Image and Map */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cover-image, #map {
+    flex: 1;
+    margin: 10px;
+}
+
+.cover-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#map {
+    height: 400px; /* Set a specific height for the map */
+    max-width: 600px; /* Set a maximum width for the map */
+}
+
+/* Hover Effect for Links */
+.dropdown-content a:hover,
+.section:hover {
+    color: blue;
+}
+
+/* Team Section Styles */
+.team-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.team-section h2 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .cover-image img, #map {
+        max-width: 100%;
+        margin: 10px 0;
+    }
 }
