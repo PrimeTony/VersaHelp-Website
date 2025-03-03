@@ -6,36 +6,7 @@
     <title>Babysitter Services - VersaHelp</title>
     <link rel="stylesheet" href="babysitting.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        .dropdown-form {
-            display: none; /* Hide the form by default */
-            margin-top: 10px;
-        }
-        .services-dropdown {
-            display: none; /* Hide the dropdown by default */
-            margin-top: 10px;
-        }
-    </style>
-    <script>
-        function toggleForm(button) {
-            const form = button.nextElementSibling; // Get the next sibling element (the form)
-            if (form.style.display === "none" || form.style.display === "") {
-                form.style.display = "block"; // Show the form
-            } else {
-                form.style.display = "none"; // Hide the form
-            }
-        }
-        function toggleDropdown() {
-            const dropdown = document.getElementById("servicesDropdown");
-            if (dropdown.style.display === "none" || dropdown.style.display === "") {
-                dropdown.style.display = "block"; // Show the dropdown
-            } else {
-                dropdown.style.display = "none"; // Hide the dropdown
-            }
-        }
-    </script>
 </head>
-
 <body>
     
     <header>
@@ -46,152 +17,170 @@
                 </a>
             </div>
             <div class="header-text">
-                <h1>babysitters</h1>
+                <h1>Find Babysitter</h1>
             </div>
         </div>
+
+        <!-- Home Icon as Navigation to Home Page -->
+        <div class="home-icon-container">
+            <a href="../index.html">
+                <img src="images/icons/home.svg" alt="Home Icon" class="home-icon">
+            </a>
+        </div>
+
     </header>
 
-    <div class="content">
-        <div class="container">
-            <button onclick="location.href='../index.html'">Back to Home</button>
-            <div class="profiles-grid">
-                <!-- Profile 1 -->
-                <div class="profile-box">
-                    <img src="../images/profiles/Babysitter 2.JPEG" alt="Profile Image">
-                    <h2>Jane Doe</h2>
-                    <p>Age: 30</p>
-                    <p>Gender: Female</p>
-                    <p>Ethnicity: Caucasian</p>
-                    <button onclick="toggleForm(this)">Select</button> <!-- Button to toggle the form -->
-                    <div class="dropdown-form">
-                        <form>
-                            <label for="address">Address:</label><br>
-                            <input type="text" id="address" name="address"><br>
-                            <label for="bookingDateTime">Booking Date & Time:</label><br>
-                            <input type="datetime-local" id="bookingDateTime" name="bookingDateTime"><br>
-                            <label for="comments">Additional Comments:</label><br>
-                            <textarea id="comments" name="comments"></textarea><br>
-                            <label for="email">Email:</label><br>
-                            <input type="email" id="email" name="email"><br>
-                            <label for="phone">Phone Number:</label><br>
-                            <input type="tel" id="phone" name="phone"><br>
-                            <label for="altPhone">Alternate Number:</label><br>
-                            <input type="tel" id="altPhone" name="altPhone"><br>
-                            <input type="submit" value="Submit">
-                        </form>
+    <div class="main-content">
+        <section class="profiles">
+            <div class="profile">
+                <img src="images/Profiles/Babysitter 2.JPEG" alt="Azwindini">
+                <div class="profile-info">
+                    <h2>Azwindini<span>✔️</span></h2>
+                    <p>Babysitter in Pretoria</p>
+                    <p>I'm a 33 year old lady, married for 9 years with two beautiful kids, I'm a full-time Christian. I love children so much, I'm a very patient and caring person. I love to laugh a lot. Right...</p>
+                    <p class="experience">Experience: > 2 years</p>
+                    <p class="response-time">Average response time: 53 minutes</p>
+                    <p class="rate">R 40.00/hr</p>
+                    <div class="rating">
+                        <span>⭐</span>
+                        <span>(1)</span>
                     </div>
                 </div>
-                <!-- Profile 2 -->
-                <div class="profile-box">
-                    <img src="../images/profiles/Babysitter 1.jpg" alt="Profile Image">
-                    <h2>John Smith</h2>
-                    <p>Age: 45</p>
-                    <p>Gender: Male</p>
-                    <p>Ethnicity: African American</p>
-                    <button onclick="toggleForm(this)">Select</button> <!-- Button to toggle the form -->
-                    <div class="dropdown-form">
-                        <form>
-                            <label for="address">Address:</label><br>
-                            <input type="text" id="address" name="address"><br>
-                            <label for="bookingDateTime">Booking Date & Time:</label><br>
-                            <input type="datetime-local" id="bookingDateTime" name="bookingDateTime"><br>
-                            <label for="comments">Additional Comments:</label><br>
-                            <textarea id="comments" name="comments"></textarea><br>
-                            <label for="email">Email:</label><br>
-                            <input type="email" id="email" name="email"><br>
-                            <label for="phone">Phone Number:</label><br>
-                            <input type="tel" id="phone" name="phone"><br>
-                            <label for="altPhone">Alternate Number:</label><br>
-                            <input type="tel" id="altPhone" name="altPhone"><br>
-                            <input type="submit" value="Submit">
-                        </form>
-                    </div>
-                </div>
-                <!-- Profile 3 -->
-                <div class="profile-box">
-                    <img src="../images/profiles/Babysitter 2.JPEG" alt="Profile Image">
-                    <h2>Maria Garcia</h2>
-                    <p>Age: 27</p>
-                    <p>Gender: Female</p>
-                    <p>Ethnicity: Hispanic</p>
-                    <button onclick="toggleForm(this)">Select</button> <!-- Button to toggle the form -->
-                    <div class="dropdown-form">
-                        <form>
-                            <label for="address">Address:</label><br>
-                            <input type="text" id="address" name="address"><br>
-                            <label for="bookingDateTime">Booking Date & Time:</label><br>
-                            <input type="datetime-local" id="bookingDateTime" name="bookingDateTime"><br>
-                            <label for="comments">Additional Comments:</label><br>
-                            <textarea id="comments" name="comments"></textarea><br>
-                            <label for="email">Email:</label><br>
-                            <input type="email" id="email" name="email"><br>
-                            <label for="phone">Phone Number:</label><br>
-                            <input type="tel" id="phone" name="phone"><br>
-                            <label for="altPhone">Alternate Number:</label><br>
-                            <input type="tel" id="altPhone" name="altPhone"><br>
-                            <input type="submit" value="Submit">
-                        </form>
-                    </div>
-                </div>
+            </div>
 
-<!-- Profile 4 -->
-<div class="profile-box">
-    <img src="../images/profiles/Babysitter 2.JPEG" alt="Profile Image">
-    <h2>Maria Garcia</h2>
-    <p>Age: 27</p>
-    <p>Gender: Female</p>
-    <p>Ethnicity: Hispanic</p>
-    <button onclick="toggleForm(this)">Select</button> <!-- Button to toggle the form -->
-    <div class="dropdown-form">
-        <form>
-            <label for="address">Address:</label><br>
-            <input type="text" id="address" name="address"><br>
-            <label for="bookingDateTime">Booking Date & Time:</label><br>
-            <input type="datetime-local" id="bookingDateTime" name="bookingDateTime"><br>
-            <label for="comments">Additional Comments:</label><br>
-            <textarea id="comments" name="comments"></textarea><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="phone">Phone Number:</label><br>
-            <input type="tel" id="phone" name="phone"><br>
-            <label for="altPhone">Alternate Number:</label><br>
-            <input type="tel" id="altPhone" name="altPhone"><br>
-            <input type="submit" value="Submit">
-        </form>
+            <div class="profile">
+                <img src="images/Profiles/Babysitter 2.JPEG" alt="Vho Rosina">
+                <div class="profile-info">
+                    <h2>Vho Rosina<span>✔️</span></h2>
+                    <p>Babysitter in Pretoria</p>
+                    <p>I'm a 33 year old lady, married for 9 years with two beautiful kids, I'm a full-time Christian. I love children so much, I'm a very patient and caring person. I love to laugh a lot. Right...</p>
+                    <p class="experience">Experience: > 2 years</p>
+                    <p class="response-time">Average response time: 53 minutes</p>
+                    <p class="rate">R 40.00/hr</p>
+                    <div class="rating">
+                        <span>⭐</span>
+                        <span>(1)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="images/Profiles/Babysitter 2.JPEG" alt="Tshilime">
+                <div class="profile-info">
+                    <h2>Tshilime<span>✔️</span></h2>
+                    <p>Babysitter in Pretoria</p>
+                    <p>I'm a 33 year old lady, married for 9 years with two beautiful kids, I'm a full-time Christian. I love children so much, I'm a very patient and caring person. I love to laugh a lot. Right...</p>
+                    <p class="experience">Experience: > 2 years</p>
+                    <p class="response-time">Average response time: 53 minutes</p>
+                    <p class="rate">R 40.00/hr</p>
+                    <div class="rating">
+                        <span>⭐</span>
+                        <span>(1)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="images/Profiles/Babysitter 2.JPEG" alt="Tshilime">
+                <div class="profile-info">
+                    <h2>Dj Fan<span>✔️</span></h2>
+                    <p>Babysitter in Pretoria</p>
+                    <p>I'm a 33 year old lady, married for 9 years with two beautiful kids, I'm a full-time Christian. I love children so much, I'm a very patient and caring person. I love to laugh a lot. Right...</p>
+                    <p class="experience">Experience: > 2 years</p>
+                    <p class="response-time">Average response time: 53 minutes</p>
+                    <p class="rate">R 40.00/hr</p>
+                    <div class="rating">
+                        <span>⭐</span>
+                        <span>(1)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional profiles here -->
+
+        </section>
+
+        <section class="booking-form">
+            <h2>Booking Form</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Details:</label>
+                    <textarea id="details" name="details" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="babysitter">Select Babysitter:</label>
+                    <select id="babysitter" name="babysitter" required>
+                        <option value="Azwindini">Azwindini</option>
+                        <option value="Vho Rosina">Vho Rosina</option>
+                        <option value="Tshilime">Tshilime</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <button type="submit">Book Now</button>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><img src="images/icons/facebook.svg" alt="Facebook Icon" class="social-icon"></a>
+                    <a href="https://www.whatsapp.com"><img src="images/icons/whatsapp.svg" alt="WhatsApp Icon" class="social-icon"></a>
+                </div>
+            </form>
+        </section>
     </div>
-</div>
 
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
 
-<!-- Profile 5 -->
-<div class="profile-box">
-    <img src="../images/profiles/Babysitter 2.JPEG" alt="Profile Image">
-    <h2>Maria Garcia</h2>
-    <p>Age: 27</p>
-    <p>Gender: Female</p>
-    <p>Ethnicity: Hispanic</p>
-    <button onclick="toggleForm(this)">Select</button> <!-- Button to toggle the form -->
-    <div class="dropdown-form">
-        <form>
-            <label for="address">Address:</label><br>
-            <input type="text" id="address" name="address"><br>
-            <label for="bookingDateTime">Booking Date & Time:</label><br>
-            <input type="datetime-local" id="bookingDateTime" name="bookingDateTime"><br>
-            <label for="comments">Additional Comments:</label><br>
-            <textarea id="comments" name="comments"></textarea><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="phone">Phone Number:</label><br>
-            <input type="tel" id="phone" name="phone"><br>
-            <label for="altPhone">Alternate Number:</label><br>
-            <input type="tel" id="altPhone" name="altPhone"><br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-</div>
-
-
+            <div class="footer-column">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="car-wash.html">Car Wash</a></li>
+                    <li><a href="transportation.html">Transportation</a></li>
+                    <li><a href="babysitting.html">Babysitting</a></li>
+                    <li><a href="home-duties.html">Home Duties</a></li>
+                    <li><a href="gardening.html">Gardening</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Popular Services</h3>
+                <ul>
+                    <li><a href="transportation.html">Transportation</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Details</h3>
+                <ul>
+                    <li>Phone: 123-456-7890</li>
+                    <li>Email: info@versahelp.com</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Work For Versahelp</h3>
+                <ul>
+                    <li>Submit Cv/Resume: info@versahelp.com</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Covid-19</h3>
+                <ul>
+                    <li><a href="https://www.sacoronavirus.co.za">SA Coronavirus</a></li>
+                </ul>
             </div>
         </div>
-    </div>
+    </footer>
 </body>
 </html>

@@ -6,158 +6,101 @@ body {
     color: #333;
     line-height: 1.6;
     background: url('images/still-life-cozy-house-with-toys.jpg') no-repeat center center fixed;
-    background-size: cover; /* Ensure the background image covers the whole page */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
 
 /* Header styling */
 header {
-    background-size: cover;
-    background-position: center;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 1em 0;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Ensures header stays on top */
-}
-
-/* Main content container */
-.content {
+    z-index: 1000;
     display: flex;
-    margin-top: 7em; /* Adjust for fixed header */
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* General section styling */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 1.2em;
+}
+
+.nav-link:hover {
+    color: #FFD700;
+}
+
 .container {
     text-align: center;
     padding: 50px 20px;
-    flex: 3; /* Main content flex */
+    margin-top: 5em;
 }
 
-.container h1 {
-    color: #fff;
-    font-size: 2em;
-    margin-bottom: 40px;
-}
-
-/* Grid layout for the new section */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column layout */
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Box styling within the grid */
-.box {
-    background-color: #ffffff6d;
+.content {
+    display: flex;
     padding: 20px;
+    margin-top: 7em; /* Adjust for fixed header */
+    flex: 1; /* Allow the content to take up remaining space */
+    justify-content: center; /* Center the content */
+}
+
+/* Position the form at the top right corner and make it square-shaped */
+.form-container {
+    position: fixed;
+    top: 100px; /* Adjusted for header */
+    right: 20px;
+    width: 350px; /* Slightly increased width */
+    height: calc(100vh - 200px); /* Adjust height to fit between header and footer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for better visibility */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
-    text-align: left;
-    text-decoration: none; /* Removes underline from links */
-    color: inherit; /* Inherits text color from parent */
+    background-color: white; /* Ensure the form has a white background */
+    padding: 20px; /* Add padding for better spacing */
+    overflow-y: auto; /* Allow scrolling if form content exceeds container height */
+    z-index: 2000; /* Ensure form is on top of other content */
 }
 
-.box:hover {
-    background-color: #d0cbcb; /* Adds a slight background change on hover */
-}
 
-.box img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px; /* Space between image and text */
-}
-
-.box h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.box p {
-    font-size: 1em;
-    color: #333;
-}
-
-/* Popular service sidebar */
-.popular-service {
-    flex: 1; /* Sidebar flex */
-    padding: 20px;
-    background-color: #fff;
+/* Form styling */
+form {
+    background-color: white;
+    padding: 10px; /* Adjust padding to make form smaller */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-left: 20px;
 }
 
-.popular-service h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+form label {
+    display: block;
+    margin-bottom: 8px;
 }
 
-.service-preview {
-    text-align: center;
-}
-
-.service-preview img {
+form input,
+form select {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    padding: 8px; /* Adjust padding to make form smaller */
+    margin-bottom: 15px; /* Adjust margin to make form smaller */
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
-.service-preview h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.service-preview p {
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.service-preview .btn {
+form button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-.service-preview .btn:hover {
+form button:hover {
     background-color: #0056b3;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.logo {
-    width: 16%; /* 60% smaller than the original 40% size */
-}
-
-.top-nav {
-    position: fixed;
-    right: 10px; /* Position the nav bar on the top right */
-    top: 10px;
-    display: flex;
-    gap: 20px; /* Space between icons */
-    align-items: center; /* Center align icons vertically */
-}
-
-.top-nav img {
-    width: 40px; /* Adjust icon size as needed */
-    height: auto;
 }
