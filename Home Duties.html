@@ -9,48 +9,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header> 
-        <div class="logo-container"> 
+    <header>
+        <div class="logo-container">
             <a href="index.html">
                 <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
             </a>
-        </div> 
-      
+        </div>
+        <nav class="top-nav">
+            <a href="#" class="nav-link" onclick="showForm('gardening')">Gardening</a>
+            <a href="#" class="nav-link" onclick="showForm('house-cleaning')">House Cleaning</a>
+            <a href="#" class="nav-link" onclick="showForm('laundry')">Laundry</a>
+            <a href="#" class="nav-link" onclick="showForm('ironing')">Ironing</a>
+        </nav>
     </header>
 
+
     <div class="content">
-        <div class="container">
-            <h1>Home Duties Services</h1>
-            <div class="grid">
-                <!-- Gardening Section -->
-                <a href="Home Duties files/gardening.html" class="box">
-                    <img src="images/icons/gardening.png" alt="Gardening">
-                    <h2>Gardening</h2>
-                    
-                </a>
-                <!-- House Cleaning Section -->
-                <a href="Home Duties files/house-cleaning.html" class="box">
-                    <img src="images/icons/house cleaning.webp" alt="House Cleaning">
-                    <h2>House Cleaning</h2>
-                    
-                </a>
-                <!-- Laundry Section -->
-                <a href="Home Duties files/laundry.html" class="box">
-                    <img src="images/icons/laundry.jpg" alt="Laundry">
-                    <h2>Laundry</h2>
-                    
-                </a>
-                <!-- Ironing Section -->
-                <a href="Home Duties files/ironing.html" class="box">
-                    <img src="images/icons/iron.jpg" alt="Ironing">
-                    <h2>Ironing</h2>
-                    
-                </a>
+        <div class="form-container">
+            <div id="form-content">
+                <p>Please select a service to book.</p>
             </div>
         </div>
+    </div>
 
-        
-
-   
+    <script src="Home Duties.js"></script>
 </body>
 </html>

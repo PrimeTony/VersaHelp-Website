@@ -1,189 +1,258 @@
-/* styles.css */
+:root {
+    --profile-bg-color: #0c145f;
+    --profile-text-color: #ecf0f1;
+    --hover-transform: translateY(-5px);
+}
 
-/* General Page Styling */
 body {
-    background: url('images/little-girl-home.jpg') no-repeat center center fixed; 
-    background-size: cover; /* Ensure the background image covers the whole page */
-    font-family: 'Roboto', sans-serif; 
-    color: #333; 
-    margin: 0; 
-    padding: 0; 
-}
-
-/* Logo Styling */
-.logo {
-    width: 16%; /* Set the logo width to 16% */
-}
-
-/* Header Content Styling */
-.header-content {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space out elements evenly */
-    align-items: center; /* Align items to the center */
-    padding: 5px; /* Reduce padding by 25% (from 20px to 15px) */
-}
-
-.header-text h1 {
-    font-size: 1.125em; /* Reduce font size by 25% (from 1.5em to 1.125em) */
-    color: white; /* Set text color to white */
-    text-align: center; /* Center align the text */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background-color: #66666681; /* Dark background for header */
-    color: white; /* White text color */
-    padding: 15px; 
-    border-bottom: 5px solid #007bff; /* Accent border */
+    background-color: #2c3e5000;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(10, 58, 216, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Container Styling */
-.container {
-    max-width: 1200px; /* Set maximum width of the container */
-    margin: 0 auto; /* Center align the container */
-    padding: 20px; /* Add padding around the container */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
 }
 
-/* Heading and Paragraph Styling */
-h1, h2 {
-    font-family: 'Roboto', sans-serif; /* Set font family to Roboto */
-    color: #000000; /* Set heading color to #333 */
+.logo-container {
+    position: absolute;
+    left: 0; /* Move logo to the far left */
 }
 
-p {
-    font-family: 'Roboto', sans-serif; /* Set font family to Roboto */
-    color: #000000; /* Set paragraph text color to #555 */
-    line-height: 1.6; /* Improve readability */
+.logo {
+    width: 15%; /* Reduced size */
 }
 
-/* Profiles Grid Styling */
-.profiles-grid {
-    display: flex; /* Use flexbox for layout */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent line breaks */
-    gap: 20px; /* Set gap between items */
-    padding: 20px; /* Add padding around the grid */
+.header-text h1 {
+    margin: 0;
+    font-size: 1.5em; /* Reduced size */
 }
 
-.profile-box {
-    display: inline-block; /* Display items inline */
-    width: 250px; /* Set width */
-    padding: 20px; /* Add padding inside the box */
-    border: 1px solid #d0cccc68; /* Add border around the box */
-    border-radius: 10px; /* Round the corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    text-align: center; /* Center align the text */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
-    background-color: rgba(185, 179, 179, 0.562); /* Set background color */
+.home-icon-container {
+    display: flex;
+    align-items: center;
 }
 
-.profile-box:hover {
-    transform: scale(1.05); /* Enlarge the profile box slightly on hover */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add deeper shadow on hover */
+.home-icon {
+    width: 40px; /* Reduced size */
+    height: 40px;
 }
 
-.profile-box img {
-    width: 100px; /* Set image width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Add space below the image */
-    border-radius: 50%; /* Make profile images circular */
-    transition: transform 0.3s ease; /* Smooth transition for transform */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex: 1; /* This makes the main content take the available space */
 }
 
-.profile-box img:hover {
-    transform: scale(1.2); /* Enlarge the image on hover */
+.profiles {
+    width: 60%; /* Adjusted width */
 }
 
-.profile-box h2 {
-    margin-bottom: 10px; /* Add space below the heading */
-    font-size: 1.2em; /* Increase font size */
+.booking-form {
+    width: 35%; /* Adjusted width */
+    background-color: #ffffff;
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(10, 10, 145, 0.709);
 }
 
-.profile-box p {
-    margin-bottom: 5px; /* Add space below the paragraph */
-    font-size: 0.9em; /* Set font size */
+.profile {
+    background-color: var(--profile-bg-color);
+    color: var(--profile-text-color);
+    border-radius: 10px;
+    padding: 15px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin */
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
 }
 
-.profile-box button {
-    margin-top: 10px; /* Add space above the button */
-    padding: 10px 20px; /* Add padding inside the button */
-    background-color: #001aff; /* Set background color */
-    color: #fff; /* Set text color to white */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Round the corners */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+.profile:hover {
+    transform: var(--hover-transform);
 }
 
-.profile-box button:hover {
-    background-color: #1950d0e3; /* Change background color on hover */
+.profile img {
+    border-radius: 50%;
+    width: 60px; /* Reduced size */
+    height: 60px;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Dropdown Form Styling */
-.dropdown-form {
-    display: none; /* Hide the form by default */
-    margin-top: 20px; /* Add space above the form */
-    padding: 20px; /* Add padding inside the form */
-    border: 1px solid #ccc; /* Add border around the form */
-    border-radius: 10px; /* Round the corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add shadow */
-    background-color: #ffffff51; /* Set background color to white */
-    max-width:500px; /* Limit the form width */
-    margin: 0 auto; /* Center the form */
-    transition: all 0.3s ease; /* Smooth transition for display */
+.profile-info {
+    flex: 1;
 }
 
-.dropdown-form label {
-    display: block; /* Display labels as block elements */
-    margin-bottom: 10px; /* Add space below the labels */
-    font-family: 'Roboto', sans-serif; /* Set font family */
-    color: #000000; /* Set label text color */
-    font-weight: bold; /* Make the label text bold */
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.2em; /* Reduced size */
 }
 
-.dropdown-form input, .dropdown-form textarea {
-    width: 70%; /* Set width to 100% */
-    padding: 10px; /* Add padding inside the input fields */
-    margin-bottom: 15px; /* Add space below the input fields */
-    border: 1px solid #cccccc85; /* Add border around the input fields */
-    border-radius: 5px; /* Round the corners */
-    box-sizing: border-box; /* Ensure padding doesn't affect total width */
-    font-family: 'Roboto', sans-serif; /* Set font family */
-    font-size: 16px; /* Increase font size */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Add inset shadow */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+.profile-info p {
+    margin: 5px 0;
+    font-size: 0.9em; /* Reduced size */
 }
 
-.dropdown-form input:focus, .dropdown-form textarea:focus {
-    border-color: #007bff; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+.profile-info .experience,
+.profile-info .response-time {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 0.9em; /* Reduced size */
 }
 
-.dropdown-form input[type="submit"] {
-    background-color: #007bff; /* Set background color */
-    color: #fff; /* Set text color to white */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Round the corners */
-    cursor: pointer; /* Change cursor to pointer */
-    padding: 10px 20px; /* Add padding inside the button */
-    font-size: 16px; /* Increase font size */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+.profile-info .rate {
+    font-size: 1em; /* Reduced size */
+    font-weight: bold;
 }
 
-.dropdown-form input[type="submit"]:hover {
-    background-color: #0056b3; /* Change background color on hover */
+.rating {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em; /* Reduced size */
 }
 
-.dropdown-form input[type="text"],
-.dropdown-form input[type="datetime-local"],
-.dropdown-form input[type="email"],
-.dropdown-form input[type="tel"],
-.dropdown-form textarea {
-    padding: 10px; /* Add padding inside the fields */
-    border: 1px solid #ddd; /* Add border around the fields */
-    border-radius: 5px; /* Round the corners */
+.rating span {
+    margin-left: 5px;
 }
 
-.dropdown-form textarea {
-    resize: vertical; /* Allow vertical resizing */
-    min-height: 100px; /* Set minimum height */
+.booking-form .form-group {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em; /* Reduced size */
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em; /* Reduced size */
+}
+
+.booking-form button {
+    padding: 8px 15px; /* Reduced padding */
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9em; /* Reduced size */
+}
+
+.booking-form button:hover {
+    background-color: #34495e;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Adjusted margin */
+}
+
+.social-icon {
+    width: 25px; /* Reduced size */
+    height: 25px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .profiles,
+    .booking-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile img {
+        margin-bottom: 15px;
+    }
+}
+
+/* New Footer Section Styles */
+.footer-section {
+    background-color: rgb(16, 0, 192);
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    margin-top: auto; /* This pushes the footer to the bottom */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
 }
