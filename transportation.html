@@ -6,27 +6,27 @@
     <title>Transportation - Top Shine Car Wash & Valet</title>
     <!-- Link to Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Link to external CSS files -->
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="transportation.css">
 </head>
 <body>
-    <!-- Logo as Navigation to Home Page -->
+
+    <!-- Logo Navigation -->
     <div class="logo-container">
         <a href="index.html">
             <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
         </a>
     </div>
 
-    <!-- Home Icon as Navigation to Home Page -->
+    <!-- Home Icon -->
     <div class="home-icon-container">
-        <a href="../index.html">
+        <a href="index.html">
             <img src="images/icons/home.svg" alt="Home Icon" class="home-icon">
         </a>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content Section -->
     <div class="main-content">
-        <!-- Booking Form Section -->
         <div class="booking-container">
             <div class="form-container">
                 <h3>Book Your Move</h3>
@@ -41,12 +41,8 @@
                 <div class="form-group">
                     <label>Vehicle Options</label>
                     <div class="checkbox-group">
-                        <label for="trailer">
-                            <input type="checkbox" id="trailer" name="vehicle-options" value="Trailer"> Trailer
-                        </label>
-                        <label for="canopy">
-                            <input type="checkbox" id="canopy" name="vehicle-options" value="Canopy"> Canopy
-                        </label>
+                        <label><input type="checkbox" name="vehicle-options" value="Trailer"> Trailer</label>
+                        <label><input type="checkbox" name="vehicle-options" value="Canopy"> Canopy</label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -64,11 +60,11 @@
                 <div class="form-group date-time">
                     <div>
                         <label for="collection-date">Collection date</label>
-                        <input type="date" id="collection-date" name="collection-date" value="2025-01-15" required>
+                        <input type="date" id="collection-date" name="collection-date" required>
                     </div>
                     <div>
                         <label for="time">Time</label>
-                        <input type="time" id="time" name="time" value="10:59" required>
+                        <input type="time" id="time" name="time" required>
                     </div>
                 </div>
                 <div class="form-group get-quotations">
@@ -80,30 +76,62 @@
 
         <!-- Slideshow Section -->
         <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="images/cars/IMG-20231108-WA0012.jpg" class="slideshow-img">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/cars/IMG_6064.JPG" class="slideshow-img">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/cars/IMG_6046.JPG" class="slideshow-img">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/cars/IMG_6040.JPG" class="slideshow-img">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/cars/IMG_6035.JPG" class="slideshow-img">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/cars/IMG_2821%20Copy.JPG" class="slideshow-img">
-            </div>
+            <div class="mySlides fade"><img src="images/cars/IMG-20231108-WA0012.jpg" class="slideshow-img"></div>
+            <div class="mySlides fade"><img src="images/cars/IMG_6064.JPG" class="slideshow-img"></div>
+            <div class="mySlides fade"><img src="images/cars/IMG_6046.JPG" class="slideshow-img"></div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
     </div>
 
-    <!-- External JavaScript File -->
+    <!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Connect with Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.whatsapp.com"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="car-wash.html">Car Wash</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="babysitting.html">Babysitting</a></li>
+                <li><a href="home-duties.html">Home Duties</a></li>
+                <li><a href="gardening.html">Gardening</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Popular Services</h3>
+            <ul>
+                <li><a href="transportation.html">Transportation</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Details</h3>
+            <ul>
+                <li>Phone: 123-456-7890</li>
+                <li>Email: info@versahelp.com</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Work for VersaHelp</h3>
+            <ul><li>Submit CV: info@versahelp.com</li></ul>
+        </div>
+        <div class="footer-column">
+            <h3>Covid-19 Info</h3>
+            <ul><li><a href="https://www.sacoronavirus.co.za">SA Coronavirus</a></li></ul>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Link to External JS -->
+    <script src="transportation.js"></script>
     <script type="module" src="transportation-form.js"></script>
 
+</body>
 </html>

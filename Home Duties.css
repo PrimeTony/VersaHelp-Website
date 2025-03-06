@@ -1,106 +1,229 @@
-/* General body styling */
+/* General Page Styling */
 body {
+    background: url('images/little-girl-home.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
-    line-height: 1.6;
-    background: url('images/still-life-cozy-house-with-toys.jpg') no-repeat center center fixed;
-    background-size: cover;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
-/* Header styling */
-header {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    padding: 0 15px;
-    font-size: 1.2em;
-}
-
-.nav-link:hover {
-    color: #FFD700;
-}
-
-.container {
-    text-align: center;
-    padding: 50px 20px;
-    margin-top: 5em;
-}
-
+/* Make sure content area expands to fill space */
 .content {
-    display: flex;
+    flex: 1; /* This pushes the footer down */
     padding: 20px;
-    margin-top: 7em; /* Adjust for fixed header */
-    flex: 1; /* Allow the content to take up remaining space */
-    justify-content: center; /* Center the content */
+    text-align: center;
 }
 
-/* Position the form at the top right corner and make it square-shaped */
-.form-container {
-    position: fixed;
-    top: 100px; /* Adjusted for header */
-    right: 20px;
-    width: 350px; /* Slightly increased width */
-    height: calc(100vh - 200px); /* Adjust height to fit between header and footer */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for better visibility */
-    border-radius: 8px;
-    background-color: white; /* Ensure the form has a white background */
-    padding: 20px; /* Add padding for better spacing */
-    overflow-y: auto; /* Allow scrolling if form content exceeds container height */
-    z-index: 2000; /* Ensure form is on top of other content */
+/* Logo Styling */
+.logo {
+    width: 16%;
 }
 
-
-/* Form styling */
-form {
-    background-color: white;
-    padding: 10px; /* Adjust padding to make form smaller */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@media (max-width: 768px) {
+    .logo {
+        width: 40%;
+    }
 }
 
-form label {
-    display: block;
-    margin-bottom: 8px;
+/* Header and Top Navigation */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    border-bottom: 5px solid #007bff;
+    text-align: center;
 }
 
-form input,
-form select {
+.logo-container {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 0;
+    background-color: #003366;
+    margin: 10px 0 0;
+    border-radius: 5px;
+}
+
+.top-nav .nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: #0056b3;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.top-nav .nav-link:hover {
+    background-color: #003f80;
+}
+
+/* Service Selection Message */
+.select-service-message {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #007bff;
+}
+
+/* Profiles Grid - Responsive Flex/Grid */
+.profiles-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-box {
     width: 100%;
-    padding: 8px; /* Adjust padding to make form smaller */
-    margin-bottom: 15px; /* Adjust margin to make form smaller */
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    max-width: 250px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-form button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
+.profile-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Form Submit Button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-box {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover;
+    }
+
+    .profile-box {
+        padding: 10px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    .top-nav .nav-link {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Footer Section (Sticky to Bottom) */
+.footer-section {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: auto; /* Push footer to bottom */
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-column {
+    flex: 1 1 150px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    color: #FFA500;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin: 5px 0;
+}
+
+.footer-column a {
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
 }
 
-form button:hover {
-    background-color: #0056b3;
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.social-icons img {
+    width: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
 }

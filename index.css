@@ -1,283 +1,176 @@
-/* Logo and Button container styling */
-.logo-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3px 5px;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    width: 95%; /* Adjusted width to be 5% smaller */
-    top: 0;
-    z-index: 1000;
-}
-
-
-
-/* Logo Container Transition */
-.logo-container {
-    transition: opacity 0.3s;
-}
-
-
-/* Styling for Cover Image Heading */
-.cover-image h2 {
+/* General Styles */
+body {
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    text-align: left;
-    margin-left: 0;
-    margin-bottom: 10px;
+    background-color: #F5F5F5; /* Light grey background */
+    color: #333333; /* Dark grey text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-/* CSS for left-aligned cover image */
-.left-image {
-    display: block;
-    margin-left: 0;
-    margin-right: auto;
-    width: auto; /* Adjust width as needed */
-}
-
-
-
-
-/* Sticky Header */
-.logo-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3px 5px;
-    background-color: rgba(0, 0, 0, 0);
-    position: fixed;
-    width: 95%;
-    top: 0;
-    z-index: 1000;
-    transition: top 0.3s; /* Optional: add transition for smoother effect */
-}
-
-/* Logo positioning and size */
-.logo-container {
-    margin-left: 5px;
+/* Header Section */
+.main-header {
+    background-color: #003366; /* Dark blue header */
+    padding: 20px 0;
+    text-align: center;
 }
 
 .logo {
-    width: 80px;
+    max-width: 180px;
 }
 
-/* Navigation links styling */
-.nav-links {
-    display: flex;
-    align-items: center;
+/* Typography */
+h1, h2, h3 {
+    color: #003366; /* Dark blue headings */
+    margin-bottom: 15px;
 }
 
-/* Dropdown button styling */
-.dropdown {
-    position: relative;
-    display: inline-block;
+/* Form Elements */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.dropbtn {
-    background-color: #000ba8e1;
-    color: #ffffff;
-    padding: 6px 10px;
-    font-size: 12px;
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form button {
+    background-color: #007BFF; /* Primary button color */
+    color: white;
     border: none;
+    padding: 12px;
+    margin-top: 10px;
     cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darker blue hover */
+}
+
+/* Sections */
+section {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    max-width: 1000px;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #a6a2a2;
-}
-
-/* Dropdown content styling */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #160fd090;
-    min-width: 140px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 10px 12px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Show dropdown content on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Footer styling */
-footer {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
+/* Intro Section */
+.intro-section {
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+    padding: 30px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-/* Social icons styling */
-.social-icons {
-    margin-top: 5px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-}
-
-.social-icon {
-    width: 24px;
-    height: 24px;
-}
-
-
-/* Main content margin adjustment */
-.content {
-    margin-top: 60px; /* Adjust the value based on the height of the header */
-}
-
-/* Cover Image Styling */
 .cover-image {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.cover-image img {
-    width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     height: auto;
-    max-height: 400px; /* Set a specific max height */
-    border-radius: 5px;
+    margin: 20px 0;
 }
 
-/* About Us Section Styling */
-.about-us {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-
-.about-us h2 {
-    margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.about-us p {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-}
-
-/* Sections Container Styling */
-.sections-container {
+/* Service Cards */
+.service-cards {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
 }
 
-.section {
-    flex: 1;
-    margin: 0 10px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
-    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition */
-}
-
-.section h3 {
-    margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.section p {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-}
-
-/* Hover Effect */
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #f0f0f0; /* Change background color on hover */
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .logo-button-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        width: 100%;
-        text-align: center;
-    }
-
-    .dropbtn {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-button-container {
-        padding: 2px 5px;
-    }
-
-    .logo {
-        width: 60px;
-    }
-
-    .dropbtn {
-        padding: 4px 8px;
-        font-size: 10px;
-    }
-}
-
-/* New Footer Section Styles */
-.footer-section {
-    background-color: rgb(16, 0, 192);
-    color: #fff;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.service-card {
+    background-color: #003366;
+    
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
     text-align: center;
+    border-radius: 5px;
+    flex: 1 1 calc(25% - 15px);
+    min-width: 150px;
+    transition: background-color 0.3s ease;
+}
+
+.service-card:hover {
+    background-color: #003366;
+   
+}
+
+/* Team Section */
+.team-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .footer-column {
-    flex: 1;
+    flex: 1 1 150px;
     margin: 10px;
 }
 
 .footer-column h3 {
-    margin-top: 0;
-    font-family: 'Roboto', sans-serif;
+    color: #FFA500; /* Accent color */
+    margin-bottom: 10px;
 }
 
 .footer-column ul {
@@ -285,290 +178,33 @@ footer p {
     padding: 0;
 }
 
-.footer-column ul li {
+.footer-column li {
     margin: 5px 0;
 }
 
-.footer-column ul li a {
-    color: #fff;
+.footer-column a {
+    color: white;
     text-decoration: none;
 }
 
-.footer-column ul li a:hover {
+.footer-column a:hover {
     text-decoration: underline;
 }
 
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icon {
+/* Social Icons */
+.social-icons img {
     width: 24px;
-    height: 24px;
-    margin: 0 10px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-/* Flex Container for Cover Image and Request Quote Form */
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 20px 0;
-}
-
-.cover-image, .request-quote {
-    flex: 1;
-    margin: 10px;
-}
-
-/* Styling for Cover Image Heading */
-.cover-image h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    text-align: left;
-    margin-left: 0;
-    margin-bottom: 10px;
-}
-
-/* CSS for left-aligned cover image */
-.left-image {
-    display: block;
-    margin-left: 0;
-    margin-right: auto;
-    width: auto; /* Adjust width as needed */
-}
-
-/* Styling for Request Quote Section */
-.request-quote {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-
-.request-quote h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.request-quote label {
-    display: block;
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.request-quote input, .request-quote select, .request-quote textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    font-family: 'Roboto', sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.request-quote button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #000ba8e1;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.request-quote button:hover {
-    background-color: #a6a2a2;
-}
-
-
-/* Hover Effect for Links */
-.dropdown-content a:hover,
-.section:hover {
-    color: blue;
-}
-
-/* Team Section Styles */
-.team-section {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-
-.team-section h2 {
-    margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.team-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.team-member {
-    text-align: center;
-    margin: 10px;
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.team-member p {
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .flex-container {
+    .service-cards, .team-container, .footer-container {
         flex-direction: column;
     }
-    
-    .cover-image img, #map {
-        max-width: 100%;
-        margin: 10px 0;
-    }
-}
 
-
-/* Team Section Styles */
-.team-section {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #ffffff00;
-    border-radius: 5px;
-}
-
-.team-section h2 {
-    margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.team-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.team-member {
-    text-align: center;
-    margin: 10px;
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.team-member p {
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Hover Effect for Team Profile Images */
-.team-member img:hover {
-    border: 2px solid blue;
-    transform: scale(1.1);
-    transition: transform 0.3s, border 0.3s;
-}
-
-/* Flex Container for Cover Image and Map */
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.cover-image, #map {
-    flex: 1;
-    margin: 10px;
-}
-
-.cover-image img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 5px;
-}
-
-#map {
-    height: 400px; /* Set a specific height for the map */
-    max-width: 600px; /* Set a maximum width for the map */
-}
-
-/* Hover Effect for Links */
-.dropdown-content a:hover,
-.section:hover {
-    color: blue;
-}
-
-/* Team Section Styles */
-.team-section {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-
-.team-section h2 {
-    margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.team-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.team-member {
-    text-align: center;
-    margin: 10px;
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s, border 0.3s;
-}
-
-.team-member p {
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-    }
-    
-    .cover-image img, #map {
-        max-width: 100%;
-        margin: 10px 0;
+    .service-card, .team-member {
+        width: 100%;
     }
 }
