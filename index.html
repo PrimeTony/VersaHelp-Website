@@ -10,115 +10,82 @@
 </head>
 <body>
 
-<!-- Logo and Button Section -->
-<div class="logo-button-container">
+<!-- Logo and Header Section -->
+<header class="main-header">
     <div class="logo-container">
         <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
     </div>
-
-</div>
+</header>
 
 <!-- Main Content -->
-<div class="content">
-    <div class="container">
+<main class="content">
 
-        <!-- Flex Container for Cover Image and Request Quote Form -->
-        <div class="flex-container">
+    <section class="intro-section">
+        <h1>Every Service You Need All In One Place</h1>
+        <img src="images/Covers/pixeltrue-plan.png" alt="Illustration by Pixeltrue Ouch!" class="cover-image">
+        <p>Illustration by <a href="https://icons8.com/illustrations/author/ARh4OKrFtdfC">Pixeltrue Ouch!</a></p>
+    </section>
 
-            <!-- Cover Image Section -->
-            <div class="cover-image">
-                <h2>Every Service You Need All In One Place</h2>
-                <img src="images/Covers/pixeltrue-plan.png" alt="Illustration by Pixeltrue Ouch!" class="left-image">
-                <p>Illustration by <a href="https://icons8.com/illustrations/author/ARh4OKrFtdfC">Pixeltrue Ouch!</a></p>
-            </div>
+    <section class="feedback-section">
+        <h2>Used Our Services Before?</h2>
+        <form id="requestQuoteForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
 
-            <!-- Request Quote Section -->
-            <div class="request-quote">
-                <h2>How Was Our Services?</h2>
-                <form id="requestQuoteForm">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+            <label for="service">What Was The Service:</label>
+            <select id="service" name="service" required>
+                <option value="car-wash">Car Wash</option>
+                <option value="transportation">Transportation</option>
+                <option value="babysitting">Babysitting</option>
+                <option value="Home Duties">Home Duties</option>
+                <option value="gardening">Gardening</option>
+            </select>
 
-                    <label for="service">What Was The Service:</label>
-                    <select id="service" name="service" required>
-                        <option value="car-wash">Car Wash</option>
-                        <option value="transportation">Transportation</option>
-                        <option value="babysitting">Babysitting</option>
-                        <option value="Home Duties">Home Duties</option>
-                        <option value="gardening">Gardening</option>
-                    </select>
+            <label for="details">Your Overall Experience/Additional Details:</label>
+            <textarea id="details" name="details" rows="4" required></textarea>
 
-                    <label for="details">Additional Details:</label>
-                    <textarea id="details" name="details" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <a href="car-wash.html" class="service-card">Car Wash</a>
+            <a href="transportation.html" class="service-card">Transportation</a>
+            <a href="babysitting.html" class="service-card">Babysitting</a>
+            <a href="Home Duties.html" class="service-card">Home Duties</a>
         </div>
+    </section>
 
-        <!-- Sections Container -->
-        <div class="sections-container">
-            <a href="car-wash.html" class="section">
-                <h3>Car Wash</h3>
-                <p>Keep your car sparkling clean with our professional car wash services. We use eco-friendly products to give your vehicle a thorough cleanse.</p>
-            </a>
-            <a href="transportation.html" class="section">
-                <h3>Transportation</h3>
-                <p>Need a ride? Our reliable transportation services are here to take you wherever you need to go, safely and on time.</p>
-            </a>
-            <a href="babysitting.html" class="section">
-                <h3>Babysitting</h3>
-                <p>Our experienced babysitters ensure your children are well taken care of while you’re away. Safety and fun are our top priorities.</p>
-            </a>
-            <a href="Home Duties.html" class="section">
-                <h3>Home Duties</h3>
-                <p>From cleaning to gardening, our home duties services cover a wide range of tasks to keep your home in top shape.</p>
-            </a>
+    <section class="team-section">
+        <h2>Meet the Team</h2>
+        <div class="team-container">
+            <div class="team-member"><img src="images/Profiles/blank make figure.png" alt="Help Desk"><p>Help Desk</p></div>
+            <div class="team-member"><img src="images/Profiles/blank make figure.png" alt="Slime"><p>Slime</p></div>
+            <div class="team-member"><img src="images/Profiles/blank make figure.png" alt="Vhone Vhane"><p>Vhone Vhane</p></div>
+            <div class="team-member"><img src="images/Profiles/blank make figure.png" alt="Team Member 4"><p>Team Member 4</p></div>
         </div>
-    </div>
-</div>
+    </section>
 
-<!-- Team Section -->
-<div class="team-section">
-    <h2>Team</h2>
-    <div class="team-container">
-        <div class="team-member">
-            <img src="images/Profiles/Babysitter 1.JPG" alt="Team Member 1">
-            <p>Help desk</p>
-        </div>
-        <div class="team-member">
-            <img src="images/Profiles/Babysitter 2.JPEG" alt="Team Member 2">
-            <p>Slime</p>
-        </div>
-        <div class="team-member">
-            <img src="images/Profiles/khai.jpg" alt="Team Member 3">
-            <p>Vhone Vhane</p>
-        </div>
-        <div class="team-member">
-            <img src="images/Profiles/khai.jpg" alt="Team Member 4">
-            <p>Team Member 4</p>
-        </div>
-    </div>
-</div>
+    <section class="about-us" id="about-us">
+        <h2>About Us</h2>
+        <p>VersaHelp is dedicated to providing top-notch services to meet all your needs. Whether you need a car wash, transportation, babysitting, or home duties, we've got you covered. Our mission is to make your life easier with reliable and professional services.</p>
+    </section>
 
-<!-- About Us Section -->
-<div class="about-us" id="about-us">
-    <h2>About Us</h2>
-    <p>VersaHelp is dedicated to providing top-notch services to meet all your needs. Whether you need a car wash, transportation, babysitting, or home duties, we've got you covered. Our mission is to make your life easier with reliable and professional services.</p>
-</div>
+</main>
 
 <!-- Footer Section -->
-<div class="footer-section">
+<footer class="footer-section">
     <div class="footer-container">
         <div class="footer-column">
             <h3>Connect with Us</h3>
             <div class="social-icons">
-                <a href="https://www.facebook.com"><img src="images/icons/facebook.svg" alt="Facebook Icon" class="social-icon"></a>
-                <a href="https://www.whatsapp.com"><img src="images/icons/whatsapp.svg" alt="WhatsApp Icon" class="social-icon"></a>
+                <a href="https://www.facebook.com"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.whatsapp.com"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
             </div>
         </div>
         <div class="footer-column">
@@ -145,21 +112,17 @@
             </ul>
         </div>
         <div class="footer-column">
-            <h3>Work For VersaHelp</h3>
-            <ul>
-                <li>Submit CV/Resume: info@versahelp.com</li>
-            </ul>
+            <h3>Work for VersaHelp</h3>
+            <ul><li>Submit CV: info@versahelp.com</li></ul>
         </div>
         <div class="footer-column">
-            <h3>Covid-19</h3>
-            <ul>
-                <li><a href="https://www.sacoronavirus.co.za">SA Coronavirus</a></li>
-            </ul>
+            <h3>Covid-19 Info</h3>
+            <ul><li><a href="https://www.sacoronavirus.co.za">SA Coronavirus</a></li></ul>
         </div>
     </div>
-</div>
+</footer>
 
-<!-- Link to external JavaScript files -->
+<!-- External Scripts -->
 <script type="module" src="firebase-form-handler.js"></script>
 <script src="index.js"></script>
 
