@@ -29,6 +29,16 @@ body {
     }
 }
 
+.home-icon-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.home-icon {
+    width: 30px;
+}
+
 /* Header and Top Navigation */
 header {
     background-color: #003366;
