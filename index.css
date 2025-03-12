@@ -85,36 +85,40 @@ section {
 
 /* Service Cards */
 .service-cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
     justify-content: center;
+    width: 100%;
+    padding: 10px;
 }
 
 .service-card {
     background-color: #003366;
-    
     color: white;
     padding: 15px 20px;
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
-    flex: 1 1 calc(25% - 15px);
-    min-width: 150px;
     transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
 .service-card:hover {
-    background-color: #003366;
-   
+    background-color: #002244;
 }
 
 /* Team Section */
 .team-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 15px;
     justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
 }
 
 .team-member {
@@ -123,8 +127,9 @@ section {
     color: white;
     padding: 15px;
     border-radius: 5px;
-    width: 150px;
     transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 200px;
 }
 
 .team-member:hover {
@@ -201,10 +206,32 @@ section {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .service-cards, .team-container, .footer-container {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* Stacks elements in a single column */
+        gap: 10px;
     }
 
     .service-card, .team-member {
         width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 15px;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .service-card, .team-member {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .footer-section {
+        font-size: 12px;
+        padding: 15px;
     }
 }
