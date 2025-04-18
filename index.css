@@ -94,7 +94,7 @@ h1, h2, h3, h4 {
 .centered-message h2 {
   font-size: 64px;
   font-weight: 900;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Strong shadow */
+  text-shadow: 2px 2px 5px rgb(0, 0, 0); /* Strong shadow */
   letter-spacing: 2px;
   margin: 0;
   padding: 20px;
