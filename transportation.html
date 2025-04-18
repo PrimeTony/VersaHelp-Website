@@ -1,137 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transportation - Top Shine Car Wash & Valet</title>
-    <!-- Link to Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="transportation.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>VersaHelp | Book Transportation</title>
+    <link rel="stylesheet" href="transportation.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 <body>
 
-    <!-- Logo Navigation -->
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
-        </a>
-    </div>
+    <!-- Header -->
+    <header class="main-header">
+        <img src="images\Logos\VersaHelp v1.png" alt="VersaHelp Logo" class="logo" />
+        <div class="home-icon-container">
+            <a href="index.html" class="home-icon-link" aria-label="Home">
+                <i class="fas fa-house home-icon"></i>
+            </a>
+        </div>
+        
+    </header>
 
-    <!-- Home Icon -->
-    <div class="home-icon-container">
-        <a href="index.html">
-            <img src="images/icons/home.svg" alt="Home Icon" class="home-icon">
-        </a>
-    </div>
-
-    <!-- Main Content Section -->
-    <div class="main-content">
-        <div class="booking-container">
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Booking Form -->
+        <section class="booking-container">
             <div class="form-container">
-                <h3>Book Your Move</h3>
-                <div class="form-group">
-                    <label for="pickup-address">Pick up address</label>
-                    <input type="text" id="pickup-address" name="pickup-address" required>
-                </div>
-                <div class="form-group">
-                    <label for="dropoff-address">Drop off address</label>
-                    <input type="text" id="dropoff-address" name="dropoff-address" required>
-                </div>
-                <div class="form-group">
-                    <label>Vehicle Options</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="vehicle-options" value="Trailer"> Trailer</label>
-                        <label><input type="checkbox" name="vehicle-options" value="Canopy"> Canopy</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="mobile-number">Mobile number *</label>
-                    <input type="tel" id="mobile-number" name="mobile-number" required>
-                </div>
-                <div class="form-group">
-                    <label for="details">Details about what we are moving... *</label>
-                    <textarea id="details" name="details" rows="4" required></textarea>
-                </div>
-                <div class="form-group date-time">
-                    <div>
-                        <label for="collection-date">Collection date</label>
-                        <input type="date" id="collection-date" name="collection-date" required>
-                    </div>
-                    <div>
-                        <label for="time">Time</label>
-                        <input type="time" id="time" name="time" required>
-                    </div>
-                </div>
-                <div class="form-group get-quotations">
-                    <button type="button" onclick="submitForm()">GET QUOTATIONS</button>
-                </div>
-                <div id="quote-message" style="display:none; margin-top: 20px;"></div>
-            </div>
-        </div>
+                <h2>Book Transportation</h2>
 
-        <!-- Slideshow Section -->
-        <div class="slideshow-container">
-            <div class="mySlides fade"><img src="images/cars/IMG-20231108-WA0012.jpg" class="slideshow-img"></div>
-            <div class="mySlides fade"><img src="images/cars/IMG_6064.JPG" class="slideshow-img"></div>
-            <div class="mySlides fade"><img src="images/cars/IMG_6046.JPG" class="slideshow-img"></div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
+                <div class="form-group">
+                    <label for="pickup-address">Pickup Address</label>
+                    <input type="text" id="pickup-address" placeholder="e.g., 123 Main St" />
+                </div>
+
+                <div class="form-group">
+                    <label for="dropoff-address">Dropoff Address</label>
+                    <input type="text" id="dropoff-address" placeholder="e.g., 456 Oak Ave" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="you@example.com" />
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile-number">Mobile Number</label>
+                    <input type="tel" id="mobile-number" placeholder="e.g., 0123456789" />
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Details</label>
+                    <textarea id="details" placeholder="Additional instructions"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="collection-date">Collection Date</label>
+                    <input type="date" id="collection-date" />
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" />
+                </div>
+
+                <div class="form-group">
+                    <label>Vehicle Options</label><br />
+                    <input type="checkbox" id="trailer" /> <label for="trailer">Trailer</label><br />
+                    <input type="checkbox" id="canopy" /> <label for="canopy">Canopy</label>
+                </div>
+
+                <div class="get-quotations">
+                    <button onclick="submitForm()">Get Quote</button>
+                    <div id="quote-message" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+
+<!-- Slideshow Section -->
+<div class="slideshow-container">
+    <div class="mySlides fade"><img src="images/cars/IMG-20231108-WA0012.jpg" class="slideshow-img"></div>
+    <div class="mySlides fade"><img src="images/cars/IMG_6064.JPG" class="slideshow-img"></div>
+    <div class="mySlides fade"><img src="images/cars/IMG_6046.JPG" class="slideshow-img"></div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Extra Content Wrapper -->
+<div class="extra-content">
+
+    <!-- Instructions -->
+    <div class="info-box instructions">
+        <h2>How This Page Works</h2>
+        <p>Fill in your transportation details like pickup & drop-off locations, date, time, and vehicle preference. Hit “Get Quote” and our team will reach out with a quote shortly.</p>
+        <p>📅 <strong>Expected Response Time:</strong> Within 1–2 business hours.</p>
     </div>
 
-    <!-- Footer Section -->
+    <!-- Contact -->
+    <div class="info-box contact">
+        <h2>Contact Us</h2>
+        <p>📧 <strong>Email:</strong> <a href="mailto:info@versahelp.com">info@versahelp.com</a></p>
+        <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/1234567890" target="_blank">+123 456 7890</a></p>
+    </div>
+
+    <!-- Popular Drivers -->
+    <div class="info-box popular-drivers">
+        <h2>🚗 Most Booked Drivers</h2>
+        <ul>
+            <li><strong>John Doe</strong> – 45 bookings</li>
+            <li><strong>Jane Smith</strong> – 38 bookings</li>
+            <li><strong>Mike Johnson</strong> – 30 bookings</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Footer -->
 <footer class="footer-section">
     <div class="footer-container">
         <div class="footer-column">
-            <h3>Connect with Us</h3>
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">Transportation</a></li>
+                <li><a href="#">Car Wash</a></li>
+                <li><a href="#">Babysitting</a></li>
+                <li><a href="#">Home Duties</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Connect</h3>
             <div class="social-icons">
-                <a href="https://www.facebook.com"><img src="images/icons/facebook.svg" alt="Facebook"></a>
-                <a href="https://www.whatsapp.com"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
-        </div>
-        <div class="footer-column">
-            <h3>Quick Navigation</h3>
-            <ul>
-                <li><a href="car-wash.html">Car Wash</a></li>
-                <li><a href="transportation.html">Transportation</a></li>
-                <li><a href="babysitting.html">Babysitting</a></li>
-                <li><a href="Home Duties.html">Home Duties</a></li>
-                
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Popular Services</h3>
-            <ul>
-                <li><a href="transportation.html">Transportation</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Contact Details</h3>
-            <ul>
-                <li>Phone: 123-456-7890</li>
-                <li>Email: info@versahelp.com</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Work for VersaHelp</h3>
-            <ul><li>Submit CV: info@versahelp.com</li></ul>
-        </div>
-        <div class="footer-column">
-            <h3>Covid-19 Info</h3>
-            <ul><li><a href="https://www.sacoronavirus.co.za">SA Coronavirus</a></li></ul>
+            
         </div>
     </div>
 </footer>
 
 
-    <!-- Link to External JS -->
-    <script src="transportation.js"></script>
-    <script type="module" src="transportation-form.js"></script>
-
+    <script type="module" src="transportation.js"></script>
 </body>
 </html>
