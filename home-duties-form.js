@@ -1,83 +1,82 @@
-// Import Firebase SDK (Make sure your HTML includes this as a module)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
-// Your Firebase configuration
+// Firebase config
 const firebaseConfig = {
-    apiKey: "AIzaSyDC1UP21noNJOOTxDuYQLuNx755CyPn7pA",
-    authDomain: "versahelp2025.firebaseapp.com",
-    projectId: "versahelp2025",
-    storageBucket: "versahelp2025.appspot.com",
-    messagingSenderId: "484581458623",
-    appId: "1:484581458623:web:c7e1599bc5d3c56812fc0a",
-    measurementId: "G-74W3DKSSCX"
+  apiKey: "AIzaSyDC1UP21noNJOOTxDuYQLuNx755CyPn7pA",
+  authDomain: "versahelp2025.firebaseapp.com",
+  projectId: "versahelp2025",
+  storageBucket: "versahelp2025.appspot.com",
+  messagingSenderId: "484581458623",
+  appId: "1:484581458623:web:c7e1599bc5d3c56812fc0a",
+  measurementId: "G-74W3DKSSCX"
 };
 
-// Initialize Firebase
+// Init Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Function to dynamically show a form based on service type
+// Show form on load (or call this from a nav if needed)
+showForm("home-duties");
+
 function showForm(serviceType) {
-    const formContainer = document.getElementById('form-content');
-    formContainer.innerHTML = `
-        <h2>Book ${serviceType.replace('-', ' ')}</h2>
-        <form id="homeDutiesForm">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" required>
-            
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" required>
-            
-            <label for="date">Date:</label>
-            <input type="date" id="date" required>
-            
-            <label for="time">Preferred Time:</label>
-            <input type="time" id="time" required>
-            
-            <label for="details">Details:</label>
-            <textarea id="details" rows="4"></textarea>
+  const formContainer = document.getElementById('form-content');
+  formContainer.innerHTML = `
+    <form id="homeDutiesForm">
+      <h2>Book ${serviceType.replace('-', ' ')}</h2>
 
-            <input type="hidden" id="serviceType" value="${serviceType}">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required placeholder="John Doe">
 
-            <button type="submit">Book Service</button>
-        </form>
-    `;
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required placeholder="john@example.com">
 
-    // Attach form submit handler
-    document.getElementById('homeDutiesForm').addEventListener('submit', submitHomeDutiesForm);
+      <label for="date">Booking Date</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" required>
+
+      <label for="details">Additional Details</label>
+      <textarea id="details" rows="4" placeholder="Describe your request..."></textarea>
+
+      <input type="hidden" id="serviceType" value="${serviceType}">
+      <button type="submit"><i class="fas fa-calendar-check"></i> Book Service</button>
+    </form>
+  `;
+
+  document.getElementById('homeDutiesForm').addEventListener('submit', submitHomeDutiesForm);
 }
 
-// Function to handle form submission and save to Firestore
-async function submitHomeDutiesForm(event) {
-    event.preventDefault();
+async function submitHomeDutiesForm(e) {
+  e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
-    const details = document.getElementById('details').value;
-    const serviceType = document.getElementById('serviceType').value;
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+  const details = document.getElementById('details').value.trim();
+  const serviceType = document.getElementById('serviceType').value;
 
-    try {
-        await addDoc(collection(db, "homeDutiesBookings"), {
-            name,
-            email,
-            date,
-            time,
-            details,
-            serviceType,
-            timestamp: new Date().toISOString()
-        });
+  try {
+    await addDoc(collection(db, "homeDutiesBookings"), {
+      name,
+      email,
+      date,
+      time,
+      details,
+      serviceType,
+      timestamp: new Date().toISOString()
+    });
 
-        alert("Booking successfully submitted!");
-        document.getElementById('homeDutiesForm').reset();
-        document.getElementById('form-content').innerHTML = `<p>Thank you for booking ${serviceType.replace('-', ' ')}!</p>`;
-    } catch (error) {
-        console.error("Error adding document: ", error);
-        alert("There was an error submitting your booking. Please try again.");
-    }
+    alert("Booking successfully submitted!");
+    document.getElementById('homeDutiesForm').reset();
+    document.getElementById('form-content').innerHTML = `<p>Thank you for booking <strong>${serviceType.replace('-', ' ')}</strong>!</p>`;
+  } catch (err) {
+    console.error("Booking error:", err);
+    alert("Error submitting booking. Please try again.");
+  }
 }
 
-// Expose showForm to global window so it works with your nav links
+// Optional: expose globally if used with nav clicks
 window.showForm = showForm;
