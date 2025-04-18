@@ -5,114 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VersaHelp</title>
   <link rel="stylesheet" href="index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxJ-AuNF-r_Ibp4xRj_0ve3n81Y6p_hR8&callback=initMap" async defer></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
- 
+
 <body>
 
 <!-- Background Section -->
 <div class="background-section">
-    <!-- Logo Container -->
-    <div class="logo-container">
-        <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
-    </div>
+  <!-- Logo Container -->
+  <div class="logo-container">
+    <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
+  </div>
 
-    <!-- Centered Message -->
-    <div class="centered-message">
-        <h2>Hi, How may we help you?</h2>
-    </div>
+  <!-- Centered Message -->
+  <div class="centered-message">
+    <h2>Hi, How may we help you?</h2>
+  </div>
 </div>
 
+<!-- Navigation -->
+<nav class="navigation">
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#map-section">Map</a></li>
+    <li><a href="#booking">Book</a></li>
+  </ul>
+</nav>
 
-  <!-- Navigation -->
-  <nav class="navigation">
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#map-section">Map</a></li>
-      <li><a href="#booking">Book</a></li>
-    </ul>
-  </nav>
+<!-- Main Content -->
+<main class="content">
+  <h1 class="services-heading" id="services">Our Services</h1>
 
-  <!-- Main Content -->
-  <main class="content">
-    <h1 class="services-heading" id="services">Our Services</h1>
-
-    <section class="services-images">
-      <div class="image-container">
-        <a href="babysitting.html">
-          <img src="images/babysit.jpeg" alt="Babysitting" class="service-image" />
-          <div class="hover-info">Babysitting Services</div>
-        </a>
-      </div>
-      <div class="image-container">
-        <a href="car-wash.html">
-          <img src="images/car wash.jpg" alt="Car Wash" class="service-image" />
-          <div class="hover-info">Car Wash Services</div>
-        </a>
-      </div>
-      <div class="image-container">
-        <a href="home-duties.html">
-          <img src="images/home duties.jpg" alt="Home Duties" class="service-image" />
-          <div class="hover-info">Home Duties Services</div>
-        </a>
-      </div>
-      <div class="image-container">
-        <a href="transportation.html">
-          <img src="images/transport.jpeg" alt="Transportation" class="service-image" />
-          <div class="hover-info">Transportation Services</div>
-        </a>
-      </div>
-    </section>
-
-<!-- About Us Section -->
-<section id="about-us" class="about-section">
-    <div class="about-content">
-        <div class="about-text">
-            <h2>About VersaHelp</h2>
-            <p>
-                At VersaHelp, we’re more than just a service provider—we’re your everyday helping hand. 
-                From car washes to babysitting, our mission is to make your life easier by offering reliable, affordable, and trustworthy help whenever you need it.
-            </p>
-            <p>
-                With a team of dedicated professionals and a passion for excellence, we are proud to serve our community with care and commitment.
-            </p>
-        </div>
-        <div class="about-image-container">
-            <img src="images/Covers/about us.jpg" alt="About VersaHelp" class="about-image">
-            <!-- Contact Us Button -->
-            <a href="#contact" class="contact-btn">Contact Us</a>
-        </div>
+  <section class="services-images">
+    <div class="image-container">
+      <a href="babysitting.html">
+        <img src="images/babysit.jpeg" alt="Babysitting Service Image" class="service-image" />
+        <div class="hover-info">Babysitting Services</div>
+      </a>
     </div>
+    <div class="image-container">
+      <a href="car-wash.html">
+        <img src="images/car wash.jpg" alt="Car Wash Service Image" class="service-image" />
+        <div class="hover-info">Car Wash Services</div>
+      </a>
+    </div>
+    <div class="image-container">
+      <a href="Home Duties.html">
+        <img src="images/home duties.jpg" alt="Home Duties Service Image" class="service-image" />
+        <div class="hover-info">Home Duties Services</div>
+      </a>
+    </div>
+    <div class="image-container">
+      <a href="transportation.html">
+        <img src="images/transport.jpeg" alt="Transportation Service Image" class="service-image" />
+        <div class="hover-info">Transportation Services</div>
+      </a>
+    </div>
+  </section>
+
+
+  <section class="info-section">
+    <h2 class="info-heading">Discover More About VersaHelp</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <i class="fas fa-map-signs"></i>
+        <h3>How to Navigate</h3>
+        <p>Easily explore our services, make bookings, and contact support all from our homepage.</p>
+      </div>
+  
+      <div class="info-card">
+        <i class="fas fa-briefcase"></i>
+        <h3>Work for VersaHelp?</h3>
+        <p>We’re always looking for great people to join our team. Email us your resume and we’ll be in touch!</p>
+        <a href="mailto:careers@versahelp.com" class="email-link">
+          <i class="fas fa-envelope"></i> Submit Your Resume
+        </a>
+      </div>
+      
+  
+      <div class="info-card">
+        <i class="fas fa-clock"></i>
+        <h3>Operating Hours</h3>
+        <p>We’re here for you every day from <strong>8AM to 8PM</strong>, including weekends!</p>
+      </div>
+  
+      <div class="info-card">
+        <i class="fas fa-award"></i>
+        <h3>Years of Experience</h3>
+        <p>With about <strong>1 year</strong> in service delivery, you're in trusted hands.</p>
+      </div>
+  
+      <div class="info-card">
+        <i class="fas fa-question-circle"></i>
+        <h3>Most Asked Questions</h3>
+        <p>Got questions? We’ve got answers in our FAQ section to help you out quickly.</p>
+      </div>
+    </div>
+  </section>
+  
+</main>
+
+<!-- Google Map Section -->
+<section id="map-section" class="map-section">
+  <h2>Our Coverage Area</h2>
+  <div id="map"></div>
 </section>
 
+<!-- Scripts -->
+<script type="module" src="firebase-form-handler.js"></script>
+<script src="index.js"></script>
 
-
-    <!-- Google Map Section -->
-    <section id="map-section" class="map-section">
-      <h2>Our Coverage Area</h2>
-      <div id="map"></div>
-    </section>
-
-        
-    <!-- Scripts -->
-    <script type="module" src="firebase-form-handler.js"></script>
-    <script src="index.js"></script>
-  </main>
-
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-      <a href="https://facebook.com/VersaHelp" target="_blank" class="footer-link">Facebook</a>
-      <span class="footer-separator">|</span>
-      <a href="mailto:jobs@versahelp.com" class="footer-link">jobs@versahelp.com</a>
-      <span class="footer-separator">|</span>
-      <span class="footer-text">Mon - Sat: 8am to 6pm</span>
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo">
+      <p>VersaHelp – Simplifying Services, One Click at a Time.</p>
     </div>
-  </footer>
-
-
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#services"><i class="fas fa-hands-helping"></i> Services</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="#about-us"><i class="fas fa-info-circle"></i> About</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact" id="contact">
+      <h4>Get in Touch</h4>
+      <p><i class="fas fa-phone-alt"></i> 087 123 4567</p>
+      <p><i class="fas fa-envelope-open-text"></i> info@versahelp.co.za</p>
+      <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 VersaHelp. All Rights Reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>

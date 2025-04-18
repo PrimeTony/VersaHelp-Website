@@ -6,13 +6,60 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header Section */
-.main-header {
-    background-color: #003366;
-    padding: 20px 0;
-    text-align: center;
+.transport-header {
+    background: url('images/transport.jpeg') no-repeat center center/cover;
+    height: 400px;
     position: relative;
+    color: white;
 }
+
+.transport-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.transport-header .logo {
+    height: 60px;
+    object-fit: contain;
+    margin: 0;
+    align-self: flex-start;
+}
+
+.home-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.home-icon-link {
+    color: white;
+    font-size: 28px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.home-icon-link:hover {
+    color: #ffc107;
+}
+
+.fade-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #fff 100%);
+    z-index: 1;
+}
+
 
 .logo {
     width: 150px;
