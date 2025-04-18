@@ -80,3 +80,19 @@ async function submitHomeDutiesForm(e) {
 
 // Optional: expose globally if used with nav clicks
 window.showForm = showForm;
+
+// footer scroll function
+document.addEventListener("DOMContentLoaded", () => {
+    const footer = document.querySelector('.footer-section');
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY + window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+
+        if (scrollY >= docHeight - 150) {
+            footer.classList.add('show');
+        } else {
+            footer.classList.remove('show');
+        }
+    });
+});

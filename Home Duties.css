@@ -21,6 +21,29 @@
     width: 150px;
     opacity: 0.95;
   }
+
+  .main-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .home-icon-link {
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .home-icon-link:hover {
+    color: #ffcc00;
+  }
+  
   
   .hero-image {
     background: url('images/home duties.jpg') no-repeat center center/cover;
