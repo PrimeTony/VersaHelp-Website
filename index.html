@@ -1,130 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VersaHelp</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxJ-AuNF-r_Ibp4xRj_0ve3n81Y6p_hR8&callback=initMap" async defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VersaHelp</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxJ-AuNF-r_Ibp4xRj_0ve3n81Y6p_hR8&callback=initMap" async defer></script>
 </head>
+ 
 <body>
 
-<!-- Logo and Header Section -->
-<header class="main-header">
+<!-- Background Section -->
+<div class="background-section">
+    <!-- Logo Container -->
     <div class="logo-container">
         <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
     </div>
-</header>
 
-<!-- Main Content -->
-<main class="content">
+    <!-- Centered Message -->
+    <div class="centered-message">
+        <h2>Hi, How may we help you?</h2>
+    </div>
+</div>
 
-    <section class="intro-section">
-        <h1>Every Service You Need All In One Place</h1>
-        <img src="images/Covers/pixeltrue-plan.png" alt="Illustration by Pixeltrue Ouch!" class="cover-image">
-        <p>Illustration by <a href="https://icons8.com/illustrations/author/ARh4OKrFtdfC">Pixeltrue Ouch!</a></p>
+
+  <!-- Navigation -->
+  <nav class="navigation">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#map-section">Map</a></li>
+      <li><a href="#booking">Book</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="content">
+    <h1 class="services-heading" id="services">Our Services</h1>
+
+    <section class="services-images">
+      <div class="image-container">
+        <a href="babysitting.html">
+          <img src="images/babysit.jpeg" alt="Babysitting" class="service-image" />
+          <div class="hover-info">Babysitting Services</div>
+        </a>
+      </div>
+      <div class="image-container">
+        <a href="car-wash.html">
+          <img src="images/car wash.jpg" alt="Car Wash" class="service-image" />
+          <div class="hover-info">Car Wash Services</div>
+        </a>
+      </div>
+      <div class="image-container">
+        <a href="home-duties.html">
+          <img src="images/home duties.jpg" alt="Home Duties" class="service-image" />
+          <div class="hover-info">Home Duties Services</div>
+        </a>
+      </div>
+      <div class="image-container">
+        <a href="transportation.html">
+          <img src="images/transport.jpeg" alt="Transportation" class="service-image" />
+          <div class="hover-info">Transportation Services</div>
+        </a>
+      </div>
     </section>
 
-    <section class="feedback-section">
-        <h2>Used Our Services Before?</h2>
-        <form id="requestQuoteForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="service">What Was The Service:</label>
-            <select id="service" name="service" required>
-                <option value="car-wash">Car Wash</option>
-                <option value="transportation">Transportation</option>
-                <option value="babysitting">Babysitting</option>
-                <option value="Home Duties">Home Duties</option>
-                <option value="gardening">Gardening</option>
-            </select>
-
-            <label for="details">Your Overall Experience/Additional Details:</label>
-            <textarea id="details" name="details" rows="4" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <section class="services-section">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <a href="car-wash.html" class="service-card">Car Wash</a>
-            <a href="transportation.html" class="service-card">Transportation</a>
-            <a href="babysitting.html" class="service-card">Babysitting</a>
-            <a href="Home Duties.html" class="service-card">Home Duties</a>
+<!-- About Us Section -->
+<section id="about-us" class="about-section">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>About VersaHelp</h2>
+            <p>
+                At VersaHelp, we’re more than just a service provider—we’re your everyday helping hand. 
+                From car washes to babysitting, our mission is to make your life easier by offering reliable, affordable, and trustworthy help whenever you need it.
+            </p>
+            <p>
+                With a team of dedicated professionals and a passion for excellence, we are proud to serve our community with care and commitment.
+            </p>
         </div>
-    </section>
-
-    <section class="team-section">
-        <h2>Meet the Team</h2>
-        <div class="team-container">
-            <div class="team-member"><img src="images/Profiles/blank make figure.png" alt="Member1"><p>Member1</p></div>
-            <div class="team-member"><img src="images/Profiles/blank make figure.png" alt="Member2"><p>Member2</p></div>
-            <div class="team-member"><img src="images/Profiles/blank make figure.png" alt="Member3"><p>Member3</p></div>
-            <div class="team-member"><img src="images/Profiles/blank make figure.png" alt="Member4"><p>Member4</p></div>
-        </div>
-    </section>
-
-    <section class="about-us" id="about-us">
-        <h2>About Us</h2>
-        <p>VersaHelp is dedicated to providing top-notch services to meet all your needs. Whether you need a car wash, transportation, babysitting, or home duties, we've got you covered. Our mission is to make your life easier with reliable and professional services.</p>
-    </section>
-
-</main>
-
-<!-- Footer Section -->
-<footer class="footer-section">
-    <div class="footer-container">
-        <div class="footer-column">
-            <h3>Connect with Us</h3>
-            <div class="social-icons">
-                <a href="https://www.facebook.com"><img src="images/icons/facebook.svg" alt="Facebook"></a>
-                <a href="https://www.whatsapp.com"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
-            </div>
-        </div>
-        <div class="footer-column">
-            <h3>Quick Navigation</h3>
-            <ul>
-                <li><a href="car-wash.html">Car Wash</a></li>
-                <li><a href="transportation.html">Transportation</a></li>
-                <li><a href="babysitting.html">Babysitting</a></li>
-                <li><a href="Home Duties.html">Home Duties</a></li>
-                
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Popular Services</h3>
-            <ul>
-                <li><a href="transportation.html">Transportation</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Contact Details</h3>
-            <ul>
-                <li>Phone: 123-456-7890</li>
-                <li>Email: info@versahelp.com</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Work for VersaHelp</h3>
-            <ul><li>Submit CV: info@versahelp.com</li></ul>
-        </div>
-        <div class="footer-column">
-            <h3>Covid-19 Info</h3>
-            <ul><li><a href="https://www.sacoronavirus.co.za">SA Coronavirus</a></li></ul>
+        <div class="about-image-container">
+            <img src="images/Covers/about us.jpg" alt="About VersaHelp" class="about-image">
+            <!-- Contact Us Button -->
+            <a href="#contact" class="contact-btn">Contact Us</a>
         </div>
     </div>
-</footer>
+</section>
 
-<!-- External Scripts -->
-<script type="module" src="firebase-form-handler.js"></script>
-<script src="index.js"></script>
+
+
+    <!-- Google Map Section -->
+    <section id="map-section" class="map-section">
+      <h2>Our Coverage Area</h2>
+      <div id="map"></div>
+    </section>
+
+        
+    <!-- Scripts -->
+    <script type="module" src="firebase-form-handler.js"></script>
+    <script src="index.js"></script>
+  </main>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+      <a href="https://facebook.com/VersaHelp" target="_blank" class="footer-link">Facebook</a>
+      <span class="footer-separator">|</span>
+      <a href="mailto:jobs@versahelp.com" class="footer-link">jobs@versahelp.com</a>
+      <span class="footer-separator">|</span>
+      <span class="footer-text">Mon - Sat: 8am to 6pm</span>
+    </div>
+  </footer>
+
+
 
 </body>
 </html>

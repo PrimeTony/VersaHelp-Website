@@ -5,17 +5,29 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+
 /* Header Section */
 .main-header {
-    background-color: #003366; /* Dark blue header */
+    background-color: #003366;
     padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
-/* Logo & Navigation */
 .logo {
     width: 150px;
-    margin: 20px;
+    margin: 0 auto;
+}
+
+/* home-icon */
+.home-icon-link {
+    color: white;
+    font-size: 26px;
+    transition: color 0.3s ease;
+}
+
+.home-icon-link:hover {
+    color: #FFA500;
 }
 
 .home-icon-container {
@@ -25,14 +37,16 @@ body {
 }
 
 .home-icon {
-    width: 30px;
+    vertical-align: middle;
 }
+
 
 /* Main Content Layout */
 .main-content {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 /* Form Section */
@@ -57,7 +71,8 @@ body {
     margin-bottom: 5px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -69,51 +84,88 @@ body {
     color: white;
     padding: 10px 15px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 /* Slideshow */
 .slideshow-container {
-    width: 45%;
+    width: 36%;
+    margin: 0 auto;
     position: relative;
+    margin-top: 20px;
 }
 
 .mySlides img {
     width: 100%;
     border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Footer Section */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    user-select: none;
+}
+.next { right: 10px; }
+.prev { left: 10px; }
+
+
 .footer-section {
+    position: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #003366;
     color: white;
-    padding: 20px 0;
-    font-size: 14px;
-    margin-top: 20px;
+    padding: 15px 0 10px;
+    font-size: 13px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.footer-section.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: left;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .footer-column {
-    flex: 1 1 150px;
-    margin: 10px;
+    flex: 1 1 180px;
+    padding: 10px;
+    text-align: left;
 }
 
 .footer-column h3 {
-    color: #FFA500; /* Accent color */
-    margin-bottom: 10px;
+    color: #FFA500;
+    margin-bottom: 8px;
+    font-size: 15px;
 }
 
 .footer-column ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-column li {
@@ -129,20 +181,144 @@ body {
     text-decoration: underline;
 }
 
-/* Social Icons */
-.social-icons img {
-    width: 24px;
-    margin-right: 10px;
-    vertical-align: middle;
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
 }
+
+.social-icons a:hover {
+    color: #FFA500; /* Or any highlight color */
+}
+
+
+.extra-content {
+    padding-bottom: 80px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;
     }
-    .booking-container, .slideshow-container {
+    .booking-container,
+    .slideshow-container,
+    .extra-content {
         width: 100%;
         margin-bottom: 20px;
     }
+}
+
+/* Instructions Section (legacy version) */
+.instructions-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.instructions-section h2 {
+    font-size: 1.8em;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.instructions-section p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.instructions-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.instructions-section a:hover {
+    text-decoration: underline;
+}
+
+.instructions-section h3 {
+    font-size: 1.4em;
+    color: #003366;
+    margin-top: 20px;
+}
+
+/* Popular Drivers Section (legacy version) */
+.popular-drivers-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.popular-drivers-section h2 {
+    font-size: 1.8em;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.popular-drivers-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popular-drivers-section li {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* ✅ New Style for Combined Extra Content */
+.extra-content {
+    max-width: 75%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-box {
+    background-color: #ffffff;
+    border-left: 6px solid #007bff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.info-box:hover {
+    transform: translateY(-3px);
+}
+
+.info-box h2 {
+    margin-top: 0;
+    color: #003366;
+}
+
+.info-box p,
+.info-box li {
+    font-size: 16px;
+    color: #333;
+}
+
+.info-box a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+.popular-drivers ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.popular-drivers li {
+    padding: 6px 0;
 }
