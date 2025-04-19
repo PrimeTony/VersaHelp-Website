@@ -274,72 +274,56 @@ h1, h2, h3 {
   }
 }
 
-/* FOOTER */
-.footer-section {
-  background-color: #003366;
-  color: white;
-  padding: 30px 0;
-  font-size: 14px;
+/* Footer Section */
+.site-footer {
+  width: 100%; /* ensures it spans full page width */
+  background-color: #062177;
+  color: #fff;
+  padding: 10px 100px 100px;
+  position: auto;
+  bottom: 0;
 }
 
-.footer-container {
+
+.footer-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 1000px;
-  margin: 0 auto;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.footer-column {
-  flex: 1 1 200px;
-  margin: 10px;
-}
-
-.footer-column h3 {
-  color: #FFA500;
+.footer-brand img {
+  max-width: 120px;
   margin-bottom: 10px;
 }
 
-.footer-column ul {
+.footer-links ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-column li {
-  margin: 5px 0;
+.footer-links ul li {
+  margin-bottom: 8px;
 }
 
-.footer-column a {
-  color: white;
+.footer-links a {
+  color: #fff;
   text-decoration: none;
 }
 
-.footer-column a:hover {
+.footer-links a:hover {
   text-decoration: underline;
 }
 
-.social-icons img {
-  width: 24px;
-  margin-right: 10px;
-  vertical-align: middle;
+.footer-contact p {
+  margin: 6px 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .service-cards, .gallery-grid, .team-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .cta-btn {
-    padding: 10px 20px;
-  }
-
-  .hero-logo {
-    max-width: 120px;
-  }
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
 }

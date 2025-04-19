@@ -242,52 +242,53 @@ main {
 }
 
 
+/* Footer Section */
 .site-footer {
-    background-color: #0c1f2c;
+    background-color: #062177;
     color: #fff;
-    padding: 40px 20px 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.footer-content {
+    padding: 10px 20px 20px;
+  }
+  
+  .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
     max-width: 1200px;
     margin: auto;
-}
-
-.footer-brand img {
+  }
+  
+  .footer-brand img {
     max-width: 120px;
     margin-bottom: 10px;
-}
-
-.footer-links ul {
+  }
+  
+  .footer-links ul {
     list-style: none;
     padding: 0;
-}
-
-.footer-links ul li {
+  }
+  
+  .footer-links ul li {
     margin-bottom: 8px;
-}
-
-.footer-links a {
+  }
+  
+  .footer-links a {
     color: #fff;
     text-decoration: none;
-}
-
-.footer-links a:hover {
+  }
+  
+  .footer-links a:hover {
     text-decoration: underline;
-}
-
-.footer-contact p {
+  }
+  
+  .footer-contact p {
     margin: 6px 0;
-}
-
-.footer-bottom {
+  }
+  
+  .footer-bottom {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid #2e3b48;
+    border-top: 1px solid #333;
     font-size: 0.9rem;
-}
+  }
+  
