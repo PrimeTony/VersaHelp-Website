@@ -1,97 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Wash Booking</title>
-    <link rel="stylesheet" href="car-wash.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Wash | VersaHelp</title>
+  <link rel="stylesheet" href="car-wash.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-<!-- Logo and Header Section -->
-<header class="main-header">
-    <div class="logo-container">
-        <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
-    </div>
+
+<!-- HERO SECTION -->
+<header class="hero">
+  <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="hero-logo">
+  <a href="index.html" class="home-icon"><i class="fas fa-home"></i></a>
+  <div class="hero-text">
+    <h1>Refresh Your Ride</h1>
+    <p>Premium Car Wash Services – Fast, Friendly, Affordable</p>
+    <a href="#booking" class="cta-btn">Book Now</a>
+  </div>
+  <div class="hero-fade"></div>
 </header>
 
-<!-- Home Icon -->
-<div class="home-icon-container">
-    <a href="index.html">
-        <img src="images/icons/home.svg" alt="Home Icon" class="home-icon">
-    </a>
-</div>
-
-    <section class="intro-section">
-        <h1>Welcome to Our Car Wash Service</h1>
-        <p>Book your car wash with ease. Choose your vehicle type, and we'll take care of the rest!</p>
-    </section>
-
-    <section class="booking-form">
-        <h2>Book a Car Wash</h2>
-        <form id="carWashForm">
-            <label for="car-make">Select Car Make:</label>
-            <input type="text" id="car-make" name="car-make" placeholder="Enter car make" required>
-
-            <label for="car-type">Select Car Type:</label>
-            <select id="car-type" name="car-type" required>
-                <option value="">-- Choose an option --</option>
-                <option value="SUV">SUV</option>
-                <option value="Taxi">Taxi</option>
-                <option value="Bakkie">Bakkie</option>
-                <option value="Sedan">Sedan</option>
-            </select>
-
-            <p id="price-display">Price: Select a car type</p>
-            
-            <button type="submit">Book Now</button>
-        </form>
-    </section>
-
-<!-- Footer Section -->
-<footer class="footer-section">
-    <div class="footer-container">
-        <div class="footer-column">
-            <h3>Connect with Us</h3>
-            <div class="social-icons">
-                <a href="https://www.facebook.com"><img src="images/icons/facebook.svg" alt="Facebook"></a>
-                <a href="https://www.whatsapp.com"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
-            </div>
-        </div>
-        <div class="footer-column">
-            <h3>Quick Navigation</h3>
-            <ul>
-                <li><a href="car-wash.html">Car Wash</a></li>
-                <li><a href="transportation.html">Transportation</a></li>
-                <li><a href="babysitting.html">Babysitting</a></li>
-                <li><a href="Home Duties.html">Home Duties</a></li>
-              
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Popular Services</h3>
-            <ul>
-                <li><a href="transportation.html">Transportation</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Contact Details</h3>
-            <ul>
-                <li>Phone: 123-456-7890</li>
-                <li>Email: info@versahelp.com</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Work for VersaHelp</h3>
-            <ul><li>Submit CV: info@versahelp.com</li></ul>
-        </div>
-        <div class="footer-column">
-            <h3>Covid-19 Info</h3>
-            <ul><li><a href="https://www.sacoronavirus.co.za">SA Coronavirus</a></li></ul>
-        </div>
+<!-- BEFORE & AFTER SECTION -->
+<section class="gallery">
+    <h2>Before & After</h2>
+    <div class="gallery-grid">
+      <div><img src="images/before1.jpg" alt="Before Wash"></div>
+      <div><img src="images/after1.jpg" alt="After Wash"></div>
+      <div><img src="images/before2.jpg" alt="Before Wash"></div>
+      <div><img src="images/after2.jpg" alt="After Wash"></div>
     </div>
+  </section>
+
+<!-- SERVICES SECTION -->
+<section class="services">
+  <h2>What We Offer</h2>
+  <div class="service-cards">
+    <div class="card"><i class="fas fa-car-side"></i><h3>Exterior Wash</h3></div>
+    <div class="card"><i class="fas fa-spray-can-sparkles"></i><h3>Interior Cleaning</h3></div>
+    <div class="card"><i class="fas fa-water"></i><h3>Engine Wash</h3></div>
+    <div class="card"><i class="fas fa-shower"></i><h3>Wax & Shine</h3></div>
+    <div class="card"><i class="fas fa-spray-can-sparkles"></i><h3>Polish</h3></div>
+  </div>
+</section>
+
+
+<!-- CAR WASHERS SECTION -->
+<section class="team">
+  <h2>Meet Our Wash Pros</h2>
+  <div class="team-grid">
+    <div class="profile">
+      <img src="images\Profiles\blank make figure.png" alt="Washer 1">
+      <h3>Alex M.</h3>
+      <p>Detailing Specialist – 4 yrs exp</p>
+    </div>
+    <div class="profile">
+      <img src="images\Profiles\blank make figure.png" alt="Washer 2">
+      <h3>Jess T.</h3>
+      <p>Interior Expert – 3 yrs exp</p>
+    </div>
+    <div class="profile">
+      <img src="images\Profiles\blank make figure.png" alt="Washer 3">
+      <h3>Sam L.</h3>
+      <p>Full Body Wash – 5 yrs exp</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="booking-form" id="booking">
+    <h2>Book Your Wash</h2>
+    <form>
+      <div class="form-group">
+        <label for="make"><i class="fas fa-car"></i> Car Make:</label>
+        <input type="text" id="make" name="make" placeholder="e.g. Toyota" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="type"><i class="fas fa-car-side"></i> Car Type:</label>
+        <select id="type" name="type" required>
+          <option value="">-- Choose --</option>
+          <option value="SUV">SUV</option>
+          <option value="Sedan">Sedan</option>
+          <option value="Bakkie">Bakkie</option>
+          <option value="Taxi">Taxi</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="date"><i class="fas fa-calendar-alt"></i> Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="time"><i class="fas fa-clock"></i> Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="location"><i class="fas fa-map-marker-alt"></i> Your Location:</label>
+        <input type="text" id="location" name="location" placeholder="e.g. Cape Town" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="phone"><i class="fas fa-phone-alt"></i> Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. +27 72 749 2269" required pattern="^\+27\d{9}$">
+      </div>
+  
+      <div class="form-group">
+        <p>If you need assistance, contact us via <a href="https://wa.me/27727492269" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>.</p>
+      </div>
+    
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+  
+
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What Clients Say</h2>
+  <blockquote>"Fast and efficient! My car feels brand new." – Tasha P.</blockquote>
+  <blockquote>"Excellent service with a smile. Highly recommend!" – Keagan V.</blockquote>
+  <blockquote>"The engine clean was a game-changer!" – Lee N.</blockquote>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Connect with Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Navigation</h3>
+      <ul>
+        <li><a href="car-wash.html">Car Wash</a></li>
+        <li><a href="transportation.html">Transportation</a></li>
+        <li><a href="babysitting.html">Babysitting</a></li>
+        <li><a href="Home Duties.html">Home Duties</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Details</h3>
+      <ul>
+        <li>Phone: 123-456-7890</li>
+        <li>Email: info@versahelp.com</li>
+      </ul>
+    </div>
+  </div>
 </footer>
 
+<script>
+  // Animate testimonials on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
 
-    <script src="script.js"></script>
+  document.querySelectorAll('.testimonials blockquote').forEach(el => {
+    el.style.animation = 'fadeSlideIn 1s ease-out forwards';
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+</script>
 </body>
 </html>

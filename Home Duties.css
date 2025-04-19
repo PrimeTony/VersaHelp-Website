@@ -147,6 +147,23 @@
     color: #0077cc;
     margin-right: 10px;
   }
+
+
+
+
+  .whatsapp-link {
+    color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .whatsapp-link:hover {
+    text-decoration: underline;
+    color: #1ebe5b;
+  }
+  
+  
+
   
   .footer-section {
     position: auto;
