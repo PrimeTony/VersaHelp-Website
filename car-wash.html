@@ -1,132 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Car Wash | VersaHelp</title>
-  <link rel="stylesheet" href="car-wash.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>VersaHelp Car Wash</title>
+  <link rel="stylesheet" href="car-wash.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <img src="images\Logos\VersaHelp v1.png" alt="VersaHelp Logo" class="hero-logo">
 
-<!-- HERO SECTION -->
-<header class="hero">
-  <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="hero-logo">
-  <a href="index.html" class="home-icon"><i class="fas fa-home"></i></a>
-  <div class="hero-text">
-    <h1>Refresh Your Ride</h1>
-    <p>Premium Car Wash Services – Fast, Friendly, Affordable</p>
-    <a href="#booking" class="cta-btn">Book Now</a>
-  </div>
-  <div class="hero-fade"></div>
-</header>
+    <div class="hero-text">
+      <h1>Professional Car Wash</h1>
+      <p>Get your vehicle cleaned at your convenience</p>
+      <a href="#booking" class="cta-btn">Book Now</a>
+    </div>
+    <div class="hero-fade"></div>
+  </header>
 
-<!-- BEFORE & AFTER SECTION -->
-<section class="gallery">
-    <h2>Before & After</h2>
-    <div class="gallery-grid">
-      <div><img src="images/before1.jpg" alt="Before Wash"></div>
-      <div><img src="images/after1.jpg" alt="After Wash"></div>
-      <div><img src="images/before2.jpg" alt="Before Wash"></div>
-      <div><img src="images/after2.jpg" alt="After Wash"></div>
+  <!-- SERVICES SECTION -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <i class="fas fa-car"></i>
+        <h3>Exterior Wash</h3>
+      </div>
+      <div class="card">
+        <i class="fas fa-soap"></i>
+        <h3>Interior Cleaning</h3>
+      </div>
+      <div class="card">
+        <i class="fas fa-pump-soap"></i>
+        <h3>Engine Detailing</h3>
+      </div>
     </div>
   </section>
 
-<!-- SERVICES SECTION -->
-<section class="services">
-  <h2>What We Offer</h2>
-  <div class="service-cards">
-    <div class="card"><i class="fas fa-car-side"></i><h3>Exterior Wash</h3></div>
-    <div class="card"><i class="fas fa-spray-can-sparkles"></i><h3>Interior Cleaning</h3></div>
-    <div class="card"><i class="fas fa-water"></i><h3>Engine Wash</h3></div>
-    <div class="card"><i class="fas fa-shower"></i><h3>Wax & Shine</h3></div>
-    <div class="card"><i class="fas fa-spray-can-sparkles"></i><h3>Polish</h3></div>
-  </div>
-</section>
-
-
-<!-- CAR WASHERS SECTION -->
-<section class="team">
-  <h2>Meet Our Wash Pros</h2>
-  <div class="team-grid">
-    <div class="profile">
-      <img src="images\Profiles\blank make figure.png" alt="Washer 1">
-      <h3>Alex M.</h3>
-      <p>Detailing Specialist – 4 yrs exp</p>
-    </div>
-    <div class="profile">
-      <img src="images\Profiles\blank make figure.png" alt="Washer 2">
-      <h3>Jess T.</h3>
-      <p>Interior Expert – 3 yrs exp</p>
-    </div>
-    <div class="profile">
-      <img src="images\Profiles\blank make figure.png" alt="Washer 3">
-      <h3>Sam L.</h3>
-      <p>Full Body Wash – 5 yrs exp</p>
-    </div>
-  </div>
-</section>
-
-<!-- BOOKING SECTION -->
-<section class="booking-form" id="booking">
-    <h2>Book Your Wash</h2>
+  <!-- BOOKING FORM -->
+  <section class="booking-form" id="booking">
+    <h2>Book a Service</h2>
     <form>
       <div class="form-group">
-        <label for="make"><i class="fas fa-car"></i> Car Make:</label>
-        <input type="text" id="make" name="make" placeholder="e.g. Toyota" required>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
       </div>
-    
       <div class="form-group">
-        <label for="type"><i class="fas fa-car-side"></i> Car Type:</label>
-        <select id="type" name="type" required>
-          <option value="">-- Choose --</option>
-          <option value="SUV">SUV</option>
-          <option value="Sedan">Sedan</option>
-          <option value="Bakkie">Bakkie</option>
-          <option value="Taxi">Taxi</option>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="service">Select Service</label>
+        <select id="service" name="service" title="Choose a car wash service">
+          <option value="exterior">Exterior Wash</option>
+          <option value="interior">Interior Cleaning</option>
+          <option value="engine">Engine Detailing</option>
         </select>
       </div>
-    
       <div class="form-group">
-        <label for="date"><i class="fas fa-calendar-alt"></i> Preferred Date:</label>
+        <label for="date">Preferred Date</label>
         <input type="date" id="date" name="date" required>
       </div>
-    
-      <div class="form-group">
-        <label for="time"><i class="fas fa-clock"></i> Preferred Time:</label>
-        <input type="time" id="time" name="time" required>
-      </div>
-    
-      <div class="form-group">
-        <label for="location"><i class="fas fa-map-marker-alt"></i> Your Location:</label>
-        <input type="text" id="location" name="location" placeholder="e.g. Cape Town" required>
-      </div>
-  
-      <div class="form-group">
-        <label for="phone"><i class="fas fa-phone-alt"></i> Phone Number:</label>
-        <input type="tel" id="phone" name="phone" placeholder="e.g. +27 72 749 2269" required pattern="^\+27\d{9}$">
-      </div>
-  
-      <div class="form-group">
-        <p>If you need assistance, contact us via <a href="https://wa.me/27727492269" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>.</p>
-      </div>
-    
-      <button type="submit">Confirm Booking</button>
+      <button type="submit">Submit Booking</button>
     </form>
+    <p>Need help? <a href="mailto:support@versahelp.com">Contact us</a></p>
   </section>
-  
 
+  <!-- GALLERY SECTION -->
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div><img src="images/gallery1.jpg" alt="Car before wash"></div>
+      <div><img src="images/gallery2.jpg" alt="Car after wash"></div>
+      <div><img src="images/gallery3.jpg" alt="Interior cleaning"></div>
+    </div>
+  </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <h2>What Clients Say</h2>
-  <blockquote>"Fast and efficient! My car feels brand new." – Tasha P.</blockquote>
-  <blockquote>"Excellent service with a smile. Highly recommend!" – Keagan V.</blockquote>
-  <blockquote>"The engine clean was a game-changer!" – Lee N.</blockquote>
-</section>
+  <!-- TEAM SECTION -->
+  <section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="profile">
+        <img src="images\Profiles\carwash1.jpg" alt="Washer John">
+        <h3>John Doe</h3>
+        <p>Exterior Specialist</p>
+      </div>
+      <div class="profile">
+        <img src="images\Profiles\carwash2.jpg" alt="Washer Jane">
+        <h3>Jane Smith</h3>
+        <p>Interior Expert</p>
+      </div>
+      <div class="profile">
+        <img src="images\Profiles\carwash3.jpg" alt="Washer Ali">
+        <h3>Ali Khan</h3>
+        <p>Engine Detailing</p>
+      </div>
+    </div>
+  </section>
 
-<!-- Footer Section -->
+  <!-- TESTIMONIAL SECTION -->
+  <section class="testimonials">
+    <h2>Customer Testimonials</h2>
+    <blockquote>“Best car wash in town! My car has never looked better.” – Sarah L.</blockquote>
+    <blockquote>“Very professional and fast. Highly recommended!” – Mike T.</blockquote>
+    <blockquote>“Affordable and reliable service every time.” – Linda R.</blockquote>
+  </section>
+
+ <!-- Footer Section -->
 <footer class="site-footer">
   <div class="footer-content">
     <div class="footer-brand">
@@ -158,29 +144,12 @@
         </a>
       </p>
     </div>
-    
   </div>
   <div class="footer-bottom">
     <p>&copy; 2025 VersaHelp. All Rights Reserved.</p>
   </div>
 </footer>
 
-<script>
-  // Animate testimonials on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animationPlayState = 'running';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.testimonials blockquote').forEach(el => {
-    el.style.animation = 'fadeSlideIn 1s ease-out forwards';
-    el.style.animationPlayState = 'paused';
-    observer.observe(el);
-  });
-</script>
 </body>
+
 </html>
