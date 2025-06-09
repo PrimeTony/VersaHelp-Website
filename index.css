@@ -172,7 +172,7 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  opacity: 100;
   font-size: 18px;
   font-weight: 600;
   text-align: center;
@@ -183,38 +183,6 @@ h1, h2, h3, h4 {
   opacity: 1;
 }
 
-/* Booking Section */
-.booking-section {
-  text-align: center;
-  background-color: #e0f7fa; /* Lighter blue */
-  padding: 40px 20px;
-  border-radius: 10px;
-  margin-top: 40px;
-}
-
-.booking-section h2 {
-  font-size: 28px;
-  color: #007BFF;
-}
-
-.booking-section p {
-  margin: 10px 0 20px;
-  color: #333;
-}
-
-.booking-button {
-  padding: 14px 30px;
-  background-color: #007BFF;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 25px;
-  transition: background 0.3s ease;
-}
-
-.booking-button:hover {
-  background-color: #0056b3;
-}
 
 /* Map Section */
 .map-section {
@@ -238,9 +206,9 @@ h1, h2, h3, h4 {
 
 /* Footer Section */
 .site-footer {
-  background-color: #212121;
+  background-color: #062177;
   color: #fff;
-  padding: 60px 20px 20px;
+  padding: 10px 20px 20px;
 }
 
 .footer-content {
@@ -377,4 +345,95 @@ h1, h2, h3, h4 {
 
 .email-link:hover {
   background-color: #0057b339;
+}
+
+.info-card-horizontal {
+  display: flex;
+  background: #f4f9ff;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 30px auto;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.info-icon {
+  color: #0b12f4;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-content {
+  flex: 1 1 auto;
+}
+
+.info-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #0b12f4;
+}
+
+.services-wrapper {
+  width: 100%;
+}
+
+.service-list-horizontal {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 10px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.service-list-horizontal li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+.service-list-horizontal li i {
+  margin-right: 8px;
+  color: #0b12f4;
+}
+
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #25D366;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  background: #1ebe5b;
+}
+
+@media (max-width: 768px) {
+  .info-card-horizontal {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-list-horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .info-icon {
+    margin-bottom: 15px;
+  }
+
+  .service-list-horizontal li {
+    justify-content: center;
+  }
 }
