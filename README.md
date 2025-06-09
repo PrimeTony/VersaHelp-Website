@@ -21,5 +21,4 @@
 ## npm start
 - Run the server:
 
-## Landing Page
-![VH  Landing Page](https://github.com/user-attachments/assets/834d4065-f516-4642-85fb-77bd7b6fc904)
+
