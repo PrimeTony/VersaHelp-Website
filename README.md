@@ -32,14 +32,6 @@
 
 ---
 
-## 🖼️ Screenshots
-
-| Home Page | Booking Form | Testimonials |
-|:--:|:--:|:--:|
-| ![Home](https://via.placeholder.com/300x200.png?text=Home+Page) | ![Booking](https://via.placeholder.com/300x200.png?text=Booking+Form) | ![Testimonials](https://via.placeholder.com/300x200.png?text=Testimonials) |
-
----
-
 ## 🛠️ Tech Stack
 
 - 🌐 HTML5 + CSS3 + JavaScript
@@ -55,6 +47,6 @@
 To run VersaHelp locally:
 
 ```bash
-git clone https://github.com/yourusername/VersaHelp.git
+git clone https://github.com/PrimeTony/VersaHelp.git
 cd VersaHelp
 open index.html
