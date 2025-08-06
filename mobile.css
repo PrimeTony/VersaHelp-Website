@@ -1,0 +1,81 @@
+/* Hide your existing .navigation on mobile */
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+
+/* Mobile Header styles */
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1001;
+}
+
+.nav-logo {
+  height: 40px;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Slide-out Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  max-width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: left 0.3s ease-in-out;
+  padding: 2rem 1rem;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.mobile-menu .close-btn {
+  text-align: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.mobile-menu ul li {
+  margin: 1rem 0;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
