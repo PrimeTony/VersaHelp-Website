@@ -1,3 +1,15 @@
+<script src="js/index.js"></script>
+// index.js
+
+//mobile scrollable 
+if (window.innerWidth < 768 && !window.location.href.includes("mobile.html")) {
+  window.location.href = "mobile.html";
+}
+
+
+
+
+
 function initMap() {
     const westviewSecurityEstate = { lat: -25.747, lng: 28.229 };
 
@@ -63,3 +75,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+

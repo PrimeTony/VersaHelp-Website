@@ -1,0 +1,306 @@
+<!-- Mobile Scrollable Version -->
+ // mobile.html
+<section id="home">
+
+<!-- Background Section -->
+<div class="background-section">
+  <!-- Logo Container -->
+  <div class="logo-container">
+    <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
+  </div>
+
+  <!-- Centered Message -->
+  <div class="centered-message">
+    <h2>How may we help you?</h2>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navigation">
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#map-section">Map</a></li>
+    
+  </ul>
+</nav>
+
+<!-- Main Content -->
+<main class="content">
+  <h1 class="services-heading" id="services">Popular Services</h1>
+
+  <section class="services-images">
+    <div class="image-container">
+      <a href="babysitting.html">
+        <img src="images/babysit.jpeg" alt="Babysitting Service Image" class="service-image" />
+        <div class="hover-info">Babysitting Services</div>
+      </a>
+    </div>
+    <div class="image-container">
+      <a href="car-wash.html">
+        <img src="images/car wash.jpg" alt="Car Wash Service Image" class="service-image" />
+        <div class="hover-info">Car Wash Services</div>
+      </a>
+    </div>
+    <div class="image-container">
+      <a href="Home Duties.html">
+        <img src="images/home duties.jpg" alt="Home Duties Service Image" class="service-image" />
+        <div class="hover-info">Home Duties Services</div>
+      </a>
+    </div>
+    <div class="image-container">
+      <a href="transportation.html">
+        <img src="images/transport.jpeg" alt="Transportation Service Image" class="service-image" />
+        <div class="hover-info">Transportation Services</div>
+      </a>
+    </div>
+  </section>
+
+
+  <section class="info-section">
+    <h2 class="info-heading">Discover More About VersaHelp</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <i class="fas fa-map-signs"></i>
+        <h3>How to Navigate</h3>
+        <p>Easily explore our services, make bookings, and contact support all from our homepage.</p>
+      </div>
+  
+      <div class="info-card">
+        <i class="fas fa-briefcase"></i>
+        <h3>Work for VersaHelp?</h3>
+        <p>We’re always looking for great people to join our team. Email us your resume and we’ll be in touch!</p>
+        <a href="mailto:careers@versahelp.com" class="email-link">
+          <i class="fas fa-envelope"></i> Submit Your Resume
+        </a>
+      </div>
+      
+  
+      <div class="info-card">
+        <i class="fas fa-clock"></i>
+        <h3>Operating Hours</h3>
+        <p>We’re here for you every day from <strong>8AM to 8PM</strong>, including weekends!</p>
+      </div>
+  
+      <div class="info-card">
+        <i class="fas fa-award"></i>
+        <h3>Years of Experience</h3>
+        <p>With about <strong>1 year</strong> in service delivery, you're in trusted hands.</p>
+      </div>
+  
+
+<!-- Font Awesome & Animate.css CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="styles.css" />
+
+
+    </div>
+  </section>
+  
+</main>
+
+<!-- Google Map Section -->
+<section id="map-section" class="map-section">
+  <h2>Our Coverage Area</h2>
+  <div id="map"></div>
+</section>
+
+<!-- Scripts -->
+<script type="module" src="firebase-form-handler.js"></script>
+<script src="index.js"></script>
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo">
+      <p>VersaHelp – Simplifying Services, One Click at a Time.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#services"><i class="fas fa-hands-helping"></i> Services</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="#about-us"><i class="fas fa-info-circle"></i> About</a></li>
+        <!-- Additional Service Links with Icons -->
+        <li><a href="car-wash.html"><i class="fas fa-car"></i> Car Wash</a></li>
+        <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+        <li><a href="babysitting.html"><i class="fas fa-baby"></i> Babysitting</a></li>
+        <li><a href="Home Duties.html"><i class="fas fa-home"></i> Home Duties</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact" id="contact">
+      <h4>Get in Touch</h4>
+      <p><i class="fas fa-phone-alt"></i> 087 123 4567</p>
+      <p><i class="fas fa-envelope-open-text"></i> info@versahelp.co.za</p>
+      <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+      <p>
+        <a href="https://wa.me/27871234567" target="_blank" style="color: #25D366;">
+          <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+        </a>
+      </p>
+    </div>
+    
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 VersaHelp. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+</section>
+
+//babysitting section
+
+<section id="babysitting">
+
+  <!-- Header with Background Image and CTA -->
+<header class="header-banner">
+    <div class="header-overlay">
+        <!-- Top bar: Logo left, Home right -->
+        <div class="top-bar">
+            <img src="images/Logos/VersaHelp v1.png" alt="VersaHelp Logo" class="logo">
+            
+        </div>
+
+        <!-- Centered Header Text -->
+        <div class="header-text">
+            <h1>Trusted Babysitters in Your Area</h1>
+            <p>Safe • Caring • Reliable</p>
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <!-- Booking Form Section -->
+        <section class="booking-section">
+            <h2><i class="fas fa-calendar-check"></i> Find a Babysitter</h2>
+            <form class="booking-form">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                    <input type="text" id="name" placeholder="e.g. Jane Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" placeholder="e.g. jane@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Contact Number</label>
+                    <input type="tel" id="phone" placeholder="e.g. 071 234 5678" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="childAge"><i class="fas fa-baby"></i> Child’s Age</label>
+                    <input type="number" id="childAge" placeholder="e.g. 3" min="0" max="18" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date"><i class="fas fa-calendar-alt"></i> Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time"><i class="fas fa-clock"></i> Time</label>
+                    <input type="time" id="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes"><i class="fas fa-info-circle"></i> Notes for the Babysitter</label>
+                    <textarea id="notes" rows="4" placeholder="e.g. No peanuts, prefers bedtime stories."></textarea>
+                </div>
+
+                <button type="submit"><i class="fas fa-paper-plane"></i> Confirm Booking</button>
+            </form>
+        </section>
+
+        <!-- Babysitter Profiles -->
+        <section class="profiles-section">
+            <h2><i class="fas fa-child"></i> Our Caring Babysitters</h2>
+
+            <div class="profiles-grid">
+                <!-- Profile Card 1 -->
+                <div class="profile-card">
+                    <img src="images\Profiles\babysiterblack.jpg" alt="Sarah M.">
+                    <div class="profile-info">
+                        <h3>Sarah M.</h3>
+                        <p>“Crafting, storytelling & bedtime songs – I’ve got it covered!”</p>
+                        <ul>
+                            <li><i class="fas fa-user-clock"></i> 5+ Years Experience</li>
+                            <li><i class="fas fa-money-bill-wave"></i> R80/hr</li>
+                            <li><i class="fas fa-stopwatch"></i> Responds in 1hr</li>
+                            <li><i class="fas fa-star"></i> Rating: 4.8 / 5.0</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Profile Card 2 -->
+                <div class="profile-card">
+                    <img src="images\Profiles\babysitterblack2.jpg" alt="Thandi L.">
+                    <div class="profile-info">
+                        <h3>Thandi L.</h3>
+                        <p>“Safety, smiles & learning through fun – your little one is in good hands.”</p>
+                        <ul>
+                            <li><i class="fas fa-user-clock"></i> 3 Years Experience</li>
+                            <li><i class="fas fa-money-bill-wave"></i> R70/hr</li>
+                            <li><i class="fas fa-stopwatch"></i> Responds in 2hrs</li>
+                            <li><i class="fas fa-star"></i> Rating: 4.6 / 5.0</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- Profile Card 3 -->
+                <div class="profile-card">
+                    <img src="images\Profiles\babysitterblack3.jpg" alt="Thandi L.">
+                    <div class="profile-info">
+                        <h3>Thandi L.</h3>
+                        <p>“Safety, smiles & learning through fun – your little one is in good hands.”</p>
+                        <ul>
+                            <li><i class="fas fa-user-clock"></i> 3 Years Experience</li>
+                            <li><i class="fas fa-money-bill-wave"></i> R70/hr</li>
+                            <li><i class="fas fa-stopwatch"></i> Responds in 2hrs</li>
+                            <li><i class="fas fa-star"></i> Rating: 4.6 / 5.0</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                                <!-- Profile Card 4 -->
+                <div class="profile-card">
+                    <img src="images\Profiles\babysiterblack4.jpg" alt="Thandi L.">
+                    <div class="profile-info">
+                        <h3>Thandi L.</h3>
+                        <p>“Safety, smiles & learning through fun – your little one is in good hands.”</p>
+                        <ul>
+                            <li><i class="fas fa-user-clock"></i> 3 Years Experience</li>
+                            <li><i class="fas fa-money-bill-wave"></i> R70/hr</li>
+                            <li><i class="fas fa-stopwatch"></i> Responds in 2hrs</li>
+                            <li><i class="fas fa-star"></i> Rating: 4.6 / 5.0</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+</section>
+
+<section id="how-it-works">...</section>
+
+<section id="booking">...</section>
+
+<section id="testimonials">...</section>
+
+<section id="gallery">...</section>
+
+<section id="employees">...</section>
+
+<section id="pricing">...</section>
+
+<section id="contact">...</section>
